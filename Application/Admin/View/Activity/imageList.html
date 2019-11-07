@@ -1,0 +1,63 @@
+<h3>活动图片列表</h3>
+<admin:panel >
+<admin:tabletool filter="true" keyword="{$pageMaps['keyword']}">
+
+  <select name="activity_id"  class="form-element ">
+    <option value="0" >==所属活动==</option>
+    <foreach name='activityArr' item='vo'>
+      <option value="{$key}" 
+        <if condition="$pageMaps['activity_id']==$key">
+        selected
+        </if>
+      >{$vo}</option>
+    </foreach>
+  </select>
+
+  <select name="status"  class="form-element ">
+    <option value="0" >==状态==</option>
+    <foreach name='statusArr' item='vo'>
+      <option value="{$key}" 
+        <if condition="$pageMaps['status']==$key">
+        selected
+        </if>
+      >{$vo}</option>
+    </foreach>
+  </select>
+</admin:tabletool>
+
+<admin:table id="table" show="选择,编号|80,排序,名称,所属活动,图片,时间,状态,操作|130">
+  <foreach name="list" item="vo">
+    <tr>
+      <td>
+        <input type="checkbox" name="id[]" value="{$vo.id}" />
+      </td>
+      <td>{$vo.id}</td>
+      <td>{$vo.order_id}</td>
+      <td>{$vo.name}</td>
+      <td>{$activityArr[$vo['activity_id']]}</td>
+      <td><img src="{$vo.img_url}" width='300'></td>
+      <td>{$vo.time|date="Y-m-d H:i:s", ###}</td>
+      <td>{$statusArr[$vo['status']]}</td> 
+      <td>
+        <a class="u-btn u-btn-primary u-btn-small" href="{:U('imageEdit',array('id'=>$vo['id']))}">修改</a> 
+      	<a class="u-btn u-btn-danger u-btn-small del" href="javascript:;" data="{$vo.id}">删除</a>
+      </td>
+    </tr>
+  </foreach>
+</admin:table>
+<admin:tablefoot action="true" item="删除" value="1"/>
+</admin:panel>
+
+
+<script>
+
+Do.ready('base',function(){
+
+	$('#table').duxTable({
+      actionUrl: "{:U('imageBatchAction')}",
+			deleteUrl: "{:U('imageDel')}",
+			actionParameter: function(){
+			}
+	});
+});
+</script>

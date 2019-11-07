@@ -1,0 +1,46 @@
+<h3>{$name}会员</h3>
+<admin:panel >
+  <admin:form url="{:U()}" method="post" id="form"  class="m-form-horizontal" >
+    
+    <admin:formrow title="权重" tip="数值越大越靠前"  >
+      <admin:text name="order_id"  value="{$info.order_id}" len="100"   />
+    </admin:formrow>
+    <admin:formrow title="联系人姓名" tip="理事单位的联系人姓名"  >
+      <admin:text name="contactname"  value="{$info.contactname}" len="100"   />
+    </admin:formrow>
+    <admin:formrow title="单位名称" tip="理事单位的名称"  >
+      <admin:text name="name"  value="{$info.name}" len="100"/>
+    </admin:formrow>
+    <admin:formrow title="职务" tip="担任职务"  >
+      <admin:text name="position"  value="{$info.position}" len="100"/>
+    </admin:formrow>
+    <admin:formrow title="所在地区" tip="理事单位所在地区"  >
+      <admin:text name="location"  value="{$info.location}" len="150" />
+    </admin:formrow>
+    <admin:formrow title="单位简介" tip="理事单位的简介">
+      <admin:textarea name="introduction" rows="10" width='large'>{$info.introduction}</admin:textarea>
+    </admin:formrow>
+
+    <admin:formrow title="联系方式" tip="理事单位的联系方式" >
+      <admin:text name="contact"  value="{$info.contact}" len="100"  />
+    </admin:formrow>
+
+	  <admin:formrow title="状态" tip=""  >
+      <admin:radio name="status"  item="待处理,常务理事,理事,不通过" value="1,2,3,4" checked="$info['status']" isset="3" />
+    </admin:formrow>     
+
+    <admin:formsubmit/>
+    <admin:text name="id" type="hidden"  value="{$info.id}"  />
+  </admin:form>
+</admin:panel>
+<script>
+Do.ready('base',function(){
+
+  var option={};
+  option.returnUrl="{:U('Admin/Council/index')}";
+  $('#form').duxFormPage(option);
+
+});
+
+</script> 
+

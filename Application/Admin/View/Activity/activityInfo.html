@@ -1,0 +1,48 @@
+<h3>{$name}活动</h3>
+<admin:panel >
+  <admin:form url="{:U()}" method="post" id="form"  class="m-form-horizontal" >
+    
+    
+    <admin:formrow title="名称" tip="活动的名称"  >
+      <admin:text name="name"  value="{$info.name}" len="100"  />
+    </admin:formrow>
+
+    <admin:formrow title="权重" tip="越小越靠前"  >
+      <admin:text name="order_id"  value="{$info.order_id}" len="100"  />
+    </admin:formrow>
+
+    <admin:formrow title="活动封面" tip="活动的封面图">
+      <admin:text  name="cover_url" type="text" value="{$info.cover_url}" len="250" width="medium" />
+      <a class="u-btn u-btn-primary" data="cover_url" href="javascript:;" id="upload_cover">上传</a>
+    </admin:formrow>
+    <admin:formrow title="封面预览" tip="">
+      <img src='{$info.cover_url}'  width='400px' id='img_cover'>
+    </admin:formrow>
+
+
+	  <admin:formrow title="状态" tip=""  >
+      <admin:radio name="status"  item="显示,隐藏" value="1,2" checked="$info['status']" isset="1" />
+    </admin:formrow>     
+
+    <admin:formsubmit/>
+    <admin:text name="id" type="hidden"  value="{$info.id}"  />
+  </admin:form>
+</admin:panel>
+<script>
+Do.ready('base',function(){
+
+  var option={};
+  option.returnUrl="{:U('Admin/Activity/activityList')}";
+  $('#form').duxFormPage(option);
+
+    $('#upload_cover').duxFileUpload({
+      
+      complete: function (data) {
+          $('#img_cover').attr('src', data.url);
+      }
+  });
+
+});
+
+</script> 
+

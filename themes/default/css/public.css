@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+    font-family: source-han-sans-simplified-c, OpenSans-Regular, "Open Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, sans-serif;
+    font-style: normal;
+}
+.nav-header-box{
+    width: 100%;
+    height:130px;
+    position: relative;
+
+}
+.nav-header-logo{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+.nav-header-logo img{
+    width: 385px;
+    margin-top: 15px;
+    margin-left: 55px;
+}
+.nav-header{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+.nav-header ul{
+    width: 100%;
+    height: 100%;
+}
+.nav-header ul li{
+    width: 14.25%;
+    height: 130px;
+    line-height: 130px;
+    text-align: center;
+    font-size: 25px;
+    float: left;
+    font-family: 微软繁细圆;
+}
+.nav-header ul li a{
+    text-decoration: none;
+    color: black;
+}
+.nav-header ul li a:hover{
+    color: #5a8bff;
+}
+/*底部黑色*/
+.bottom-box{
+    width:100% ;
+    height: 310px;
+    background: black;
+}
+.bottom-text{
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+.bottom-text-left{
+    width: 70%;
+    height: 100%;
+    color: white;
+    float: left;
+}
+.Tt-bottom{
+    font-size: 20px;
+    padding-top: 70px;
+}
+.bottom-text-left a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: #8b8b8b;
+    font-size:15px;
+}
+.bottom-text-left p{
+    margin-top: 5px;
+}
+.bottom-text-right{
+    width: 30%;
+    height: 100%;
+    color: white;
+    text-align: left;
+    float: right;
+}
+.bottom-text-right p{
+    margin-right: 10px;
+    text-decoration: none;
+    color: #8b8b8b;
+    font-size:15px;
+    margin-top: 5px;
+}

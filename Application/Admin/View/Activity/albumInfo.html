@@ -1,0 +1,85 @@
+<h3>{$name}活动相册</h3>
+<admin:panel >
+  <admin:form url="{:U()}" method="post" id="form"  class="m-form-horizontal" >
+    
+    <div class="formitm">
+      <label class="lab">所属活动</label>
+      <div class="ipt">
+          <select name="activity_id" class="form-element ">
+            <option value="0" >==选择活动==</option>
+            <foreach name='activityArr' item='vo'>
+              <option value="{$key}" 
+                <if condition="$info['activity_id']==$key">
+                selected
+                </if>
+              >{$vo}</option>
+            </foreach>
+          </select>
+          <p class="help-block">请选择图片所属的活动</p>
+      </div>
+    </div>
+    <admin:formrow title="相册名称" tip="图片名称"  >
+      <admin:text name="name"  value="{$info.name}" len="100"  />
+    </admin:formrow>
+
+    <admin:formrow title="权重" tip="越小越靠前"  >
+      <admin:text name="order_id"  value="{$info.order_id}" len="100"  />
+    </admin:formrow>
+
+    <admin:formrow title="相册封面" tip="封面图片">
+      <admin:text  name="img_url" type="text" value="{$info.img_url}" len="250" width="medium" />
+      <a class="u-btn u-btn-primary" data="img_url" href="javascript:;" id="upload_cover">上传</a>
+    </admin:formrow>
+    <admin:formrow title="封面预览" tip="">
+      <img src='{$info.img_url}'  width='300px' id='img_cover'>
+    </admin:formrow>
+
+    <admin:formrow title="多图上传" tip="子相册图片">
+      <a class="u-btn u-btn-primary webuploader-container" data="img_show" href="javascript:;" id="upload_images">
+        <div class="webuploader-pick">上传</div>
+      </a>
+      <div class = 'm-multi-image f-cb' id='img_show'>
+        <foreach name='subImageArr' item='vo'>
+          <li draggable="true">
+            <a class="close" href="javascript:;">×</a>
+            <div class="img">
+              <span class="pic">
+                <img src="{$vo.url}" width="80" height="80">
+              </span>
+            </div>
+            <div class="title">
+              <input name="img_show[url][]" type="hidden" value="{$vo.url}"> 
+              <input name="img_show[title][]" type="text" value="{$vo.name}"> 
+            </div>
+          </li>
+        </foreach>
+      </div>
+    </admin:formrow>
+	  <admin:formrow title="状态" tip=""  >
+      <admin:radio name="status"  item="显示,隐藏" value="1,2" checked="$info['status']" isset="1" />
+    </admin:formrow>     
+
+    <admin:formsubmit/>
+    <admin:text name="id" type="hidden"  value="{$info.id}"  />
+  </admin:form>
+</admin:panel>
+<script>
+Do.ready('base',function(){
+
+  var option={};
+  option.returnUrl="{:U('Admin/Activity/albumList')}";
+  $('#form').duxFormPage(option);
+
+    $('#upload_cover').duxFileUpload({
+      
+      complete: function (data) {
+          $('#img_cover').attr('src', data.url);
+      }
+  });
+
+    $('#upload_images').duxMultiUpload();
+
+});
+
+</script> 
+

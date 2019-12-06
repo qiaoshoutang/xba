@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><h3>理事单位列表</h3>
+<?php if (!defined('THINK_PATH')) exit();?><h3>会员列表</h3>
 
         <div class="m-panel ">
             <div class="panel-body">

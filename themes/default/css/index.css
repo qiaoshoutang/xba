@@ -105,6 +105,7 @@
     width: 285px;
     margin-top: 30px;
     margin-left: 20px;
+    height: 180px;
 }
 .content-association-text{
     width: 63%;
@@ -124,6 +125,11 @@
     line-height: 180%;
     text-align: justify;
     color: #8b8b8b;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 .content-association-bottom{
     width: 100%;
@@ -136,13 +142,20 @@
     border-top: 1px silver solid;
 }
 .association-div{
-    width: 50%;
+    width: 100%;
     float: left;
     padding-top: 20px;
 }
 .association-div a{
     color: #8b8b8b;
     line-height: 180%;
+    text-decoration: none;
+    width: 50%;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
 }
 .click-switch{
     display: none;

@@ -80,7 +80,7 @@
                                     </li><?php endforeach; endif; ?>
                                 </div>
                             </div>
-                        </div>
+
                     </div>
                     <div class="click-switch">
                         <!--上半部份-->
@@ -153,7 +153,8 @@
                             <?php if(is_array($list3)): foreach($list3 as $key=>$vo): ?><li><a href=""><?php echo ($vo['title']); ?></a></li><?php endforeach; endif; ?>
                         </ul>
                     </div>
-                </div>
+
+    </div>
 
             </div>
             <!--协会活动-->

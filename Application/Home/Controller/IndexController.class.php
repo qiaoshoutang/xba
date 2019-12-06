@@ -30,7 +30,7 @@ class IndexController extends SiteController {
 
     //首页
     public function index(){
-        
+
         $contentMod = D('Admin/Content');
         
         //协会新闻

@@ -18,6 +18,8 @@
     <div class="text-content">
         <!--小的导航栏-->
         <div class="nav_small">
+
+            <img src="images/location.png" alt="" class="locationAA">
             <a href="">首页</a>><a href="">协会动态</a>><a href="">协会新闻</a>
         </div>
         <!--主要内容-->

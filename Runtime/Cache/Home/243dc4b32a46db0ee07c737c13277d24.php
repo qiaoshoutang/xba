@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,9 +43,7 @@
                     </div>
                     <div class="AssGgUl">
                         <ul>
-                            <!--{foreach name='noticeList' item='vo'}-->
-                            <li><a href="">{$vo['title']}</a></li>
-                            <!--{/foreach}-->
+                            <?php if(is_array($noticeList)): foreach($noticeList as $key=>$vo): ?><li><a href=""><?php echo ($vo['title']); ?></a></li><?php endforeach; endif; ?>
                         </ul>
                     </div>
                 </div>
@@ -53,22 +51,20 @@
             <!--右边内容-->
             <div class="rightCon">
                 <ul>
-                    <!--{foreach name='list' item='vo'}-->
-                    <li>
+                    <?php if(is_array($list)): foreach($list as $key=>$vo): ?><li>
                         <div class="list_Img_L">
-                             <img src="{$vo['image']|default='/Public/img/pic-none.png'}" alt="">
+                             <img src="<?php echo ((isset($vo['image']) && ($vo['image'] !== ""))?($vo['image']):'/Public/img/pic-none.png'); ?>" alt="">
                         </div>
                         <div class="list_Cont_R">
                             <div class="Cont_R_Title">
-                                {$vo['title']}
+                                <?php echo ($vo['title']); ?>
                             </div>
                             <div class="Cont_R_Text">
-                                {$vo['description']}
+                                <?php echo ($vo['description']); ?>
                             </div>
                         </div>
 
-                    </li>
-                    <!--{/foreach}-->
+                    </li><?php endforeach; endif; ?>
                 </ul>
             </div>
         </div>

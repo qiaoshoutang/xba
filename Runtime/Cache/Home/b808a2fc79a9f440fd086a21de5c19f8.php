@@ -1,4 +1,4 @@
-<style>
+<?php if (!defined('THINK_PATH')) exit();?><style>
     .Copyright{
         color: #8b8b8b;
         width: 100%;
@@ -38,4 +38,3 @@
         Copyright@2019 厦门市区块链协会 All Rights Reserved
     </div>
 </div>
-

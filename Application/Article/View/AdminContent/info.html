@@ -1,4 +1,4 @@
-<h3>{$name}活动</h3>
+<h3>{$name}动态</h3>
 <admin:form url="{:U()}" method="post" id="form">
   <div class="g-main-body">
     <div class="g-main-content m-form-horizontal">
@@ -17,28 +17,32 @@
           </select>
         </admin:formrow>
 
-        <admin:formrow title="文章标题" tip="文章标题,请不要填写特殊字符">
+        <admin:formrow title="标题" tip="文章标题,请不要填写特殊字符">
           <admin:text name="title" value="{$info.title}" len="350"  width="full" />
         </admin:formrow>
+        <admin:formrow title="作者" tip="请不要填写特殊字符">
+          <admin:text name="author" value="{$info.author}" len="350" />
+        </admin:formrow>
 
-        <admin:formrow title="文章内容" tip="文章的内容"  >
+        <admin:formrow title="内容" tip="文章的内容"  >
           <admin:textarea name="content" rows="10" width="full" class="u-editor">{$info.content}</admin:textarea>
         </admin:formrow>
-        
+        <admin:formrow title="简介" tip="文章的简介"  >
+          <admin:textarea name="description" rows="10" width="xlarge" >{$info.description}</admin:textarea>
+        </admin:formrow>
         <admin:formrow title="缩略图" tip=""  >
           <admin:text name="image" type="text" value="{$info.image}" len="250" width="medium" />
           <a class="u-btn u-btn-primary u-img-upload" data="image" preview="image-preview" href="javascript:;" >上传</a> 
           <a class="u-btn u-btn-primary" href="javascript:;" id="image-preview">预览</a> 
         </admin:formrow>
 
-      <admin:formrow title="添加时间" tip="请按照格式填写发布时间">
-        <if condition="empty($info['time'])">
-            <admin:text name="time" value="{$time|date='Y/m/d H:i',###}" len="250" class="u-time" />
-        <else/>
-            <admin:text name="time" value="{$info.time|date='Y/m/d H:i',###}" len="250"  class="u-time" />
-        </if>
-       
-      </admin:formrow>
+        <admin:formrow title="添加时间" tip="请按照格式填写发布时间">
+          <if condition="empty($info['time'])">
+              <admin:text name="time" value="{$time|date='Y/m/d H:i',###}" len="250" class="u-time" />
+          <else/>
+              <admin:text name="time" value="{$info.time|date='Y/m/d H:i',###}" len="250"  class="u-time" />
+          </if>
+        </admin:formrow>
 
         <admin:formrow title="文章状态" tip="">
           <admin:radio name="status" item="草稿,通过,不通过" value="1,2,3" checked="$info['status']" isset="1" />

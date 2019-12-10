@@ -49,23 +49,6 @@ class MenuService{
 		            ),
 		        )
 		    ),
-
-		    'Notice' => array(
-		        'name' => '公告',
-		        'order' => 8,
-		        'menu' => array(
-		            array(
-		                'name' => '公告列表',
-		                'url' => U('Admin/Notice/index'),
-		                'order' => 1
-		            ),
-		            array(
-		                'name' => '公告添加',
-		                'url' => U('Admin/Notice/add'),
-		                'order' => 2
-		            ),
-		        )
-		    ),
 		    'Council' => array(
 		        'name' => '协会会员',
 		        'order' => 10,

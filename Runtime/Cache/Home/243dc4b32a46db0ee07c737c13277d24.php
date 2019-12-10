@@ -34,12 +34,15 @@
                         <li><a href='/xbadynamic/1'>协会新闻</a></li>
                         <li><a href='/xbadynamic/2'>国际资讯</a></li>
                         <li><a href='/xbadynamic/3'>国内要闻</a></li>
+                        <li><a href='/xbadynamic/4'>通知公告</a></li>
                     </ul>
                 </div>
                 <div class="Title_Ass AssGg">
                     <div class="topTitle_Gg">
                         <div class="topTitle_Ggg">通知公告</div>
-                        <div class="moreAnd">更多</div>
+                        <div class="moreAnd" onclick='window.location.href="/xbadynamic/4"'>
+                            更多
+                        </div>
                     </div>
                     <div class="AssGgUl">
                         <ul>
@@ -51,7 +54,7 @@
             <!--右边内容-->
             <div class="rightCon">
                 <ul>
-                    <?php if(is_array($list)): foreach($list as $key=>$vo): ?><li>
+                    <?php if(is_array($list)): foreach($list as $key=>$vo): ?><li onclick='window.location.href="/xbacontent/<?php echo ($vo["content_id"]); ?>"'>
                         <div class="list_Img_L">
                              <img src="<?php echo ((isset($vo['image']) && ($vo['image'] !== ""))?($vo['image']):'/Public/img/pic-none.png'); ?>" alt="">
                         </div>

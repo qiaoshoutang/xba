@@ -91,14 +91,10 @@ class ContentArticleModel extends Model {
      * @return bool 更新状态
      */
     public function saveData($type = 'add'){
-//         $data=I('post.');
-//         var_dump($data);
-//         exit;
 
         //事务总表处理
         $this->startTrans();
         $contentId = D('DuxCms/Content')->saveData($type);
-
 
         if(!$contentId){
             $this->error = D('DuxCms/Content')->getError();

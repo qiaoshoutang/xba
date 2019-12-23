@@ -19,7 +19,7 @@ class IndexController extends SiteController {
             $ishttps=1;
         }
             
-        if ($detect->isMobile()){           
+        if ($detect->isMobile()){    
             if($ishttps){
                 redirect('https://'.$_SERVER['HTTP_HOST'].'/home_m');
             }else{
@@ -69,12 +69,39 @@ class IndexController extends SiteController {
         $list = $contentMod->loadList(['class_id'=>$type,'status'=>2],10);
 
         //公告
-        $noticeList = D('Admin/Notice')->loadList(['state'=>1],10,'time desc');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
 
         $this->assign('list',$list);
         $this->assign('noticeList',$noticeList);
         $this->assign('navi_num',3);
         $this -> siteDisplay('dynamic');
+    }
+    
+    //动态详情
+    public function newsContent(){
+        
+        $content_id = I('request.content_id',0);
+
+        $contentMod = D('Article/ContentArticle');
+        
+        
+
+        $contentInfo = $contentMod->getInfo($content_id);
+        if(empty($contentInfo)){
+            exit('找不到该内容');
+        }
+
+        M('content')->where(['content_id'=>$content_id])->setInc('views'); //浏览自增1
+        
+        $contentInfo['content'] = html_out($contentInfo['content']);
+        
+        //公告
+        $noticeList = D('Admin/Content')->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+
+
+        $this->assign('contentInfo',$contentInfo);
+        $this->assign('noticeList',$noticeList);
+        $this -> siteDisplay('newsContent');
     }
     
     //团队结束

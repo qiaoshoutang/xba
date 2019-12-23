@@ -15,7 +15,7 @@ class AdminContentController extends AdminController {
                 'name' => '内容管理',
                 'description' => '管理网站所有内容',
                 ),
-            'menu' => array(
+                'menu' => array(
                     array(
                         'name' => '协会新闻',
                         'url' => U('index',array('class_id'=>1)),
@@ -31,9 +31,13 @@ class AdminContentController extends AdminController {
                         'url' => U('index',array('class_id'=>3)),
                         'icon' => 'list',
                     ),
-                    
                     array(
-                        'name' => '添加新闻',
+                        'name' => '通知公告',
+                        'url' => U('index',array('class_id'=>4)),
+                        'icon' => 'list',
+                    ),
+                    array(
+                        'name' => '添加动态',
                         'url' => U('add'),
                         'icon' => 'plus',
                     ),
@@ -48,6 +52,10 @@ class AdminContentController extends AdminController {
         $where = array();
         $keyword = I('request.keyword','');
         $status = I('request.status',0,'intval');
+        $class_id = I('request.class_id',0,'intval');
+        if(!empty($class_id)){
+            $where['A.class_id'] = $class_id;
+        }
         if(!empty($keyword)){
             $where['A.title'] = array('like','%'.$keyword.'%');
         }

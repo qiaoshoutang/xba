@@ -10,22 +10,7 @@ return array(
 
 	    'xbahome'=>'Home/Index/index',
 	    'xbadynamic/:type'=>'Home/Index/dynamic',
-	    
-    	'to/:t'=>'Go/Index/ad2',
-	    'spshow/:content_id/:back'=>'Article/Content/index',
-	    'gocontent/:gzh_num'=>'Home/Short/message',
-	    
-	    'memo'=>'Home/Index/memo',
-	    'alliance_act'=>'Home/Index/alliance_act',
-	    'alliance_act_details/:activity_id/:p'=>'Home/Index/alliance_act_details',
-	    'alliance_album_details/:album_id/:p'=>'Home/Index/alliance_album_details',
-	    'business'=>'Home/Index/business',
-	    'team'=>'Home/Index/team',
-	    'cooperation'=>'Home/Index/cooperation',
-	    'councils'=>'Home/Index/council',
-	    'recruit'=>'Home/Index/recruit',
-	    'aboutUs'=>'Home/Index/aboutUs',
-	    
+	    'xbacontent/:content_id'  =>'Home/Index/newsContent',
 	    
 	    'home_m'          =>  'Home/Mobile/index',
 	    'memo_m'          =>  'Home/Mobile/memo',

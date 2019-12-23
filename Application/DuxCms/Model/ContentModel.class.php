@@ -10,8 +10,8 @@ class ContentModel extends Model {
         //全部
         array('class_id','intval',3,'function'), //栏目ID
         array('urltitle','getUrlTitle',3,'callback'), //URL
-        array('description','getDescription',3,'callback'), //描述
-        array('image','getImage',3,'callback'), //形象图
+//         array('description','getDescription',3,'callback'), //描述
+//         array('image','getImage',3,'callback'), //形象图
         array('time','strtotime',3,'function'), //时间
         array('status','intval',3,'function'), //状态
         array('sequence','intval',3,'function'), //顺序

@@ -99,7 +99,7 @@
 
                     <div class="click-switch">
                         <!--上半部份-->
-                        <div class="content-association">
+                        <div class="content-association" onclick='window.location.href="/xbacontent/{$first1.content_id}"'>
                             <div class="content-association-img">
                                 <img src="{$first1['image']|default='/Public/img/pic-none.png'}" alt="">
                             </div>
@@ -110,9 +110,7 @@
                                 <div class="Tt-asspcoation-text">
                                     {$first1['description']}
                                 </div>
-
                             </div>
-
                         </div>
 
                 
@@ -123,16 +121,16 @@
                                 <ul class="association-div">
                                 <!--{foreach name='list1' item='vo'}-->
                                     <li>
-                                        <a href="">{$vo['title']}</a>
+                                        <a href="/xbacontent/{$vo.content_id}">{$vo['title']}</a>
                                     </li>
                                 <!--{/foreach}-->
-                                </div>
+                                </ul>
                             </div>
-
+                        </div>
                     </div>
                     <div class="click-switch">
                         <!--上半部份-->
-                        <div class="content-association">
+                        <div class="content-association" onclick='window.location.href="/xbacontent/{$first2.content_id}"'>
                             <div class="content-association-img">
                                 <img src="{$first2['image']|default='/Public/img/pic-none.png'}" alt="">
                             </div>
@@ -143,9 +141,7 @@
                                 <div class="Tt-asspcoation-text">
                                     {$first2['description']}
                                 </div>
-
                             </div>
-
                         </div>
                         <!--下班部分-->
                         <div class="content-association-bottom">
@@ -153,7 +149,7 @@
                                 <ul class="association-div">
                                     <!--{foreach name='list2' item='vo'}-->
                                     <li>
-                                        <a href="">{$vo['title']}</a>
+                                        <a href="/xbacontent/{$vo.content_id}">{$vo['title']}</a>
                                     </li>
                                     <!--{/foreach}-->
                                 </ul>
@@ -162,7 +158,7 @@
                     </div>
                     <div class="click-switch">
                         <!--上半部份-->
-                        <div class="content-association">
+                        <div class="content-association" onclick='window.location.href="/xbacontent/{$first3.content_id}"'>
                             <div class="content-association-img">
                                  <img src="{$first3['image']|default='/Public/img/pic-none.png'}" alt="">
                             </div>
@@ -173,9 +169,7 @@
                                 <div class="Tt-asspcoation-text">
                                    {$first3['description']}
                                 </div>
-
                             </div>
-
                         </div>
                         <!--下班部分-->
                         <div class="content-association-bottom">
@@ -183,7 +177,7 @@
                                 <ul class="association-div">
                                    <!--{foreach name='list3' item='vo'}-->
                                     <li>
-                                        <a href="">{$vo['title']}</a>
+                                        <a href="/xbacontent/{$vo.content_id}">{$vo['title']}</a>
                                     </li>
                                     <!--{/foreach}-->
                                 </ul>
@@ -197,18 +191,17 @@
                             通知公告
                         </div>
                         <div class="moreAndmore_N">
-                            <a href="" style="font-weight: 400">更多</a>
+                            <a href="/xbadynamic/4" style="font-weight: 400">更多</a>
                         </div>
                     </div>
                     <div class="box-right-Text">
                         <ul>
                             <!--{foreach name='list3' item='vo'}-->
-                            <li><a href="">{$vo['title']}</a></li>
+                            <li><a href="/xbacontent/{$vo.content_id}">{$vo['title']}</a></li>
                             <!--{/foreach}-->
                         </ul>
                     </div>
-
-    </div>
+                </div>
 
             </div>
             <!--协会活动-->

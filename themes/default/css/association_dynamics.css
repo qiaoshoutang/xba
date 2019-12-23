@@ -38,13 +38,13 @@
 }
 .Title_Ass{
     width: 100%;
-    height: 405px;
+    height: 305px;
     background: white;
     overflow: hidden;
 }
 
 .topTitle{
-    font-size: 25px;
+    font-size: 23px;
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -68,10 +68,10 @@
 }
 .Title_Ass_ul li{
     text-align: center;
-    font-size: 23px;
+    font-size: 21px;
     border-top: 1px silver dashed;
-    height: 75px;
-    line-height: 75px;
+    height: 65px;
+    line-height: 65px;
     font-weight: 250;
 }
 .Title_Ass_ul li a{

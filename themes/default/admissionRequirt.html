@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>厦门区块链协会(关于协会)</title>
+    <title>厦门区块链协会(会员申请)</title>
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/association_dynamics.css">
     <link rel="stylesheet" href="css/notice.css">
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/aboutUs.css">
+
 </head>
 <style>
     .Title_Apply{
@@ -142,6 +143,10 @@
         margin-top: 30px;
         text-align: center;
     }
+    .RhLc{
+        width: 100%;
+        text-align: center;
+    }
 </style>
 <body>
 <div class="box">
@@ -228,13 +233,14 @@
 
                             </div>
                         </div>
-
-
                     </div>
                     <!--入会流程-->
-                    <div class="AdmissionRequritBox" style="display: none">
+                    <div class="AdmissionRequritBox" >
                         <div class="TitleAdm">
                             厦门市区块链协会入会流程图
+                        </div>
+                        <div class="RhLc">
+                            <img src="images/RhLc.jpg" alt="" width="40%">
                         </div>
                     </div>
                     <!--入会指南-->
@@ -245,38 +251,38 @@
 
                     </div>
                     <!--入会申请-->
-                    <div class="AdmissionRequritBox" >
+                    <div class="AdmissionRequritBox" style="display: none">
                         <div class="TitleAdm">
                             厦门市区块链协会入会申请
                         </div>
                         <form class="template-form">
                             <div class="formBox">
-                                <span class="FormName">真实姓名</span>
-                                <input type="text" placeholder="请填写真实姓名">
+                                <span class="FormName" >真实姓名</span>
+                                <input type="text" placeholder="请填写真实姓名" name="name">
                             </div>
                             <div class="formBox">
                                 <span class="FormName">手机号</span>
-                                <input type="text" placeholder="请填写手机号">
+                                <input type="text" placeholder="请填写手机号" name="phoneNum">
                             </div>
                             <div class="formBox">
                                 <span class="FormName">微信</span>
-                                <input type="text" placeholder="请填写微信">
+                                <input type="text" placeholder="请填写微信" name="WeChat">
                             </div>
                             <div class="formBox">
                                 <span class="FormName">邮箱</span>
-                                <input type="text" placeholder="请填写邮箱">
+                                <input type="text" placeholder="请填写邮箱" name="mailbox">
                             </div>
                             <div class="formBox">
                                 <span class="FormName">单位</span>
-                                <input type="text" placeholder="请填写单位">
+                                <input type="text" placeholder="请填写单位" name="Company">
                             </div>
                             <div class="formBox">
                                 <span class="FormName">职位</span>
-                                <input type="text" placeholder="请填写所属职位">
+                                <input type="text" placeholder="请填写所属职位" name="post">
                             </div>
                             <div class="textareaBox">
                                 <span class="FormName">主营业务</span>
-                                <textarea  name=""  placeholder="请填写区块链领域探索及发展情况"></textarea>
+                                <textarea  name=""  placeholder="请填写区块链领域探索及发展情况" id="review"></textarea>
                             </div>
                             <div class="formBox">
                                 <span class="FormName">职位</span>
@@ -294,9 +300,6 @@
                         </form>
 
                     </div>
-
-
-
                 </div>
             </div>
             <!--底部黑色-->
@@ -310,10 +313,58 @@
 </div>
 </body>
 </html>
+<script src="js/layui/layui.js"></script>
 <script>
+    layui.use('layer', function(){  //layer弹框
+        var layer = layui.layer;
+    });
+
     $(".Title_Tro_ul li a").eq(0).addClass("actict");
     $(".Title_Tro_ul li a").click(function () {
         $(this).addClass("actict");
         $(this).siblings("li").removeClass("actict")
+    })
+
+
+    $("#btn_submit").click(function () {
+        var username=$("input[name='name']").val();
+        var phoneNum=$("input[name='phoneNum']").val();
+        var WeChat=$("input[name='WeChat']").val();
+        var mailbox=$("input[name='mailbox']").val();
+        var Company=$("input[name='Company']").val();
+        var post=$("input[name='post']").val();
+        var review=$("#review").val();
+
+        if(username==''||username=="null"){
+             layer.msg("名字不能为空");
+            return false
+        }
+        if(phoneNum==''||phoneNum=="null"){
+            layer.msg("手机号码不能为空");
+            return false
+        }
+        if(WeChat==''||WeChat=="null"){
+            layer.msg("微信号不能为空");
+            return false
+        }
+        if(mailbox==''||mailbox=="null"){
+            layer.msg("邮箱不能为空");
+            return false
+        }
+        if(Company==''||Company=="null"){
+            layer.msg("单位不能为空");
+            return false
+        }
+        if(post==''||post=="null"){
+            layer.msg("职位昵称不能为空");
+            return false
+        }
+        if(review==''||review=="null"){
+            layer.msg("主要营业不能为空");
+            return false
+        }else {
+            layer.msg("提交成功，工作人员将在一周内给与答复");
+            return true
+        }
     })
 </script>

@@ -1,4 +1,28 @@
 
+<style>
+    .pagesub{
+        width: 90%;
+        position: relative;
+        z-index: 9999;
+        background: white;
+        top: -40px;
+        margin: 0 auto;
+        display: none;
+    }
+    .pagesub-nav{
+        width: 100%;
+        height: 40px;
+        font-size: 15px;
+        line-height: 40px;
+        border-bottom: 1px silver dashed;
+    }
+    .pagesub-nav:hover .pagesub-nav a{
+        color:#5a8bff ;
+    }
+    .pagesub-nav:last-child{
+        border-bottom: none
+    }
+</style>
 <!--顶部导航栏-->
 <div class="nav-header-box">
     <div class="nav-header-logo">
@@ -7,13 +31,61 @@
     <div class="nav-header">
         <ul>
             <li><a href="/">首页</a></li>
-            <li><a href="">关于协会</a></li>
-            <li><a href="/xbadynamic/1">协会动态</a></li>
-            <li><a href="">协会活动</a></li>
-            <li><a href="">协会会员</a></li>
+            <li>
+                <a href="">关于协会</a>
+                <div class="pagesub">
+                    <div class="pagesub-nav"><a href="">协会简介</a></div>
+                    <div class="pagesub-nav"><a href="">协会章程</a></div>
+                    <div class="pagesub-nav"><a href="">协会领导</a></div>
+                    <div class="pagesub-nav"><a href="">组织架构</a></div>
+                    <div class="pagesub-nav"><a href="">联系我们</a></div>
+                    <div class="pagesub-nav"><a href="">加入我们</a></div>
+                </div>
+
+            </li>
+            <li>
+                <a href="/xbadynamic/1">协会动态</a>
+                <div class="pagesub">
+                    <div class="pagesub-nav"><a href="">协会新闻</a></div>
+                    <div class="pagesub-nav"><a href="">国际资讯</a></div>
+                    <div class="pagesub-nav"><a href="">国内要闻</a></div>
+                </div>
+            </li>
+            <li>
+                <a href="">协会活动</a>
+                <div class="pagesub">
+                    <div class="pagesub-nav"><a href="">活动预告</a></div>
+                    <div class="pagesub-nav"><a href="">活动回顾</a></div>
+                    <div class="pagesub-nav"><a href="">国际峰会</a></div>
+                </div>
+            </li>
+            <li>
+                <a href="">协会会员</a>
+                <div class="pagesub">
+                    <div class="pagesub-nav"><a href="">会员动态</a></div>
+                    <div class="pagesub-nav"><a href="">会员管理</a></div>
+                    <div class="pagesub-nav"><a href="">服务方向</a></div>
+                </div>
+            </li>
             <li><a href="">行业研究</a></li>
-            <li><a href="">会员申请</a></li>
+            <li>
+                <a href="">会员申请</a>
+                <div class="pagesub">
+                    <div class="pagesub-nav"><a href="">入会要求</a></div>
+                    <div class="pagesub-nav"><a href="">入会流程</a></div>
+                    <div class="pagesub-nav"><a href="">入会指南</a></div>
+                    <div class="pagesub-nav"><a href="">入会申请</a></div>
+                </div>
+            </li>
         </ul>
     </div>
 </div>
+<script src="js/jquery.js"></script>
+<script>
+    $(".nav-header li").hover(function () {
+        $(this).find($(".pagesub")).stop(true, false).slideDown(300);
+    },function () {
+        $(this).find($(".pagesub")).stop(true, false).slideUp(300);
+    });
+</script>
        

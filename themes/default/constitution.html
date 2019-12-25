@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>厦门区块链协会(关于协会)</title>
+    <title>厦门区块链协会(协会章程)</title>
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/association_dynamics.css">
     <link rel="stylesheet" href="css/notice.css">
@@ -68,7 +68,7 @@
         <div class="nav_small">
 
             <img src="images/location.png" alt="" class="locationAA">
-            <a href="">首页</a>><a href="">关于协会</a>><a href="">协会简介</a>
+            <a href="">首页</a>><a href="">关于协会</a>><a href="">协会章程</a>
         </div>
         <!--主要内容-->
         <div class="Ass_content_box">
@@ -77,29 +77,26 @@
                 <div class="leftAss">
                     <div class="Title_Ass">
                         <div class="topTitle">
-                            <span class="TitleBlue">
-
-                            </span>
+                            <span class="TitleBlue"></span>
                             协会简介
                         </div>
                         <ul class="Title_Tro_ul">
-                            <li><a href=''>协会简介</a></li>
-                            <li><a href=''>协会章程</a></li>
-                            <li><a href=''>协会领导</a></li>
-                            <!--<li><a href=''>协会顾问</a></li>-->
-                            <li><a href=''>组织架构</a></li>
-                            <li><a href=''>联系我们</a></li>
+                            <li><a href='/xbaabout/1'>协会简介</a></li>
+                            <li><a href='/xbaabout/2'>协会章程</a></li>
+                            <li><a href='/xbaabout/3'>协会领导</a></li>
+                            <li><a href='/xbaabout/4'>组织架构</a></li>
+                            <li><a href='/xbaabout/5'>联系我们</a></li>
                         </ul>
                     </div>
                     <div class="Title_Ass AssGg">
                         <div class="topTitle_Gg">
                             <div class="topTitle_Ggg">通知公告</div>
-                            <div class="moreAnd">更多</div>
+                            <div class="moreAnd" onclick='window.location.href="/xbadynamic/4"'>更多</div>
                         </div>
                         <div class="AssGgUl">
                             <ul>
                                 <!--{foreach name='noticeList' item='vo'}-->
-                                <li><a href="">{$vo['title']}</a></li>
+                                <li><a href="/xbacontent/{$vo.content_id}">{$vo['title']}</a></li>
                                 <!--{/foreach}-->
                             </ul>
                         </div>
@@ -107,29 +104,8 @@
                 </div>
                 <!--右边内容-->
                 <div class="rightCon">
-                    <!--协会简介-->
-                    <div class="noticeText" style="display: none">
-                        <div class="noticeTextTitleBox">
-                            <div class="TitleNotic">
-                                厦门市区块链协会简介
-                            </div>
-                            <div class="NoticTime">
-                                <span>作者：</span><span>秘书处</span>
-                                <span class="TimeFb">发布时间：</span><span>2019-12-13 17:00:30</span>
-                                <span class="TimeFb"><img src="images/guankan.png" alt="" width="3%"> 650</span>
-                            </div>
-                        </div>
-                        <div class="NoticeContent">
-                            <img src="images/xiehuiLogo.png" alt="">
-                            <p>厦门市区块链协会，英文译名：Xiamen Blockchain Association（缩写：XBA），是由注册在厦门的区块链企业、组织或个人自愿组成的具有法人资格的地方性、联合性、非营利性的社会组织。</p>
-                            <p>厦门市区块链协会接受业务主管单位厦门市工商联的政治引导和业务指导，接受社团登记管理机关厦门市民政局的监督管理，办公地址为：厦门市湖里区枋湖西路189号二层209单元。</p>
-                            <p>协会宗旨为：坚持中国共产党的全面领导，根据中国共产党章程的规定，设立中国共产党的组织，开展党的活动，为党组织的活动提供必要条件。发挥工商联所属商会统战性职能，突出思想政治引导，确保商会发展的正确方向。强化自律功能，坚持守法诚信和履行社会责任。遵守国家宪法、法律、法规和政策，践行社会主义核心价值观,遵守社会道德风尚。以会员共性需求为导向，借助协会“信用价值”、“团队力量”和“品牌影响力”，提供单一企业较难或无法实现的服务需求；通过不断的完善协会的运营规则，带动会员企业的规范经营，在协会内部建立更高的企业经营信誉底线，从而带动整个协会企业的健康发展。</p>
-                        </div>
-
-
-                    </div>
                     <!--协会章程-->
-                    <div class="noticeText" style="display: none" >
+                    <div class="noticeText">
                         <div class="noticeTextTitleBox">
                             <div class="TitleNotic">
                                 厦门市区块链协会协会章程
@@ -279,230 +255,13 @@
                             <p>第五十四条 本章程经2019年12月13日会员大会表决通过。</p>
                             <p>第五十五条 本章程的解释权属本团体理事会。</p>
                             <p>第五十六条 本章程自社团登记管理机关核准之日起生效。</p>
-
-                        </div>
-
-
-                    </div>
-                    <!--协会领导-->
-                    <div class="noticeText"  style="display: none" id="Leader" >
-                        <!--会长-->
-                        <div class="page_leader">
-                            <div class="NoticeTitleZ">
-                                <span class="HzTitle">会长</span>
-                                <span class="more">更多》</span>
-                            </div>
-                            <ol class="page_leader_ul">
-                                <li>
-                                    <a href="">
-                                        <img src="" alt="" >
-                                        <div class="info">
-                                            <h4>曾俊杰</h4>
-                                            <p>厦门区块链协会会长</p>
-                                            <p>蚂蚁节点联盟创始人</p>
-                                            <p>中高会区块链产业联盟理事长</p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </ol>
-                        </div>
-                        <!--监事长-->
-                        <div class="page_leader">
-                            <div class="NoticeTitleZ">
-                                <span class="HzTitle">监事长</span>
-                                <span class="more">更多》</span>
-                            </div>
-                            <ol class="page_leader_ul">
-                                <li>
-                                    <a href="">
-                                        <img src="" alt="" >
-                                        <div class="info">
-                                            <h4>曾俊杰</h4>
-                                            <p>厦门区块链协会会长</p>
-                                            <p>蚂蚁节点联盟创始人</p>
-                                            <p>中高会区块链产业联盟理事长</p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </ol>
-                        </div>
-                        <!--名誉会长-->
-                        <div class="page_leader">
-                            <div class="NoticeTitleZ">
-                                <span class="HzTitle">名誉会长</span>
-                                <span class="more">更多》</span>
-                            </div>
-                            <ol class="page_leader_ul">
-                                <li>
-                                    <a href="">
-                                        <img src="" alt="" >
-                                        <div class="info">
-                                            <h4>曾俊杰</h4>
-                                            <p>厦门区块链协会会长</p>
-                                            <p>蚂蚁节点联盟创始人</p>
-                                            <p>中高会区块链产业联盟理事长</p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </ol>
-                        </div>
-                        <!--顾问-->
-                        <div class="page_leader">
-                            <div class="NoticeTitleZ">
-                                <span class="HzTitle">顾问</span>
-                                <span class="more">更多》</span>
-                            </div>
-                            <ol class="page_leader_ul">
-                                <li>
-                                    <a href="">
-                                        <img src="" alt="" >
-                                        <div class="info">
-                                            <h4>曾俊杰</h4>
-                                            <p>厦门区块链协会会长</p>
-                                            <p>蚂蚁节点联盟创始人</p>
-                                            <p>中高会区块链产业联盟理事长</p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </ol>
-                        </div>
-                        <!--秘书长-->
-                        <div class="page_leader">
-                            <div class="NoticeTitleZ">
-                                <span class="HzTitle">秘书长</span>
-                                <span class="more">更多》</span>
-                            </div>
-                            <ol class="page_leader_ul">
-                                <li>
-                                    <a href="">
-                                        <img src="" alt="" >
-                                        <div class="info">
-                                            <h4>曾俊杰</h4>
-                                            <p>厦门区块链协会会长</p>
-                                            <p>蚂蚁节点联盟创始人</p>
-                                            <p>中高会区块链产业联盟理事长</p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </ol>
-                        </div>
-                        <!--副会长-->
-                        <div class="page_leader">
-                            <div class="NoticeTitleZ">
-                                <span class="HzTitle">副会长</span>
-                                <span class="more">更多》</span>
-                            </div>
-                            <ol class="page_leader_ul">
-                                <li>
-                                    <a href="">
-                                        <img src="" alt="" >
-                                        <div class="info">
-                                            <h4>曾俊杰</h4>
-                                            <p>厦门区块链协会会长</p>
-                                            <p>蚂蚁节点联盟创始人</p>
-                                            <p>中高会区块链产业联盟理事长</p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </ol>
-                        </div>
-                        <!--监事-->
-                        <div class="page_leader">
-                            <div class="NoticeTitleZ">
-                                <span class="HzTitle">监事</span>
-                                <span class="more">更多》</span>
-                            </div>
-                            <ol class="page_leader_ul">
-                                <li>
-                                    <a href="">
-                                        <img src="" alt="" >
-                                        <div class="info">
-                                            <h4>曾俊杰</h4>
-                                            <p>厦门区块链协会会长</p>
-                                            <p>蚂蚁节点联盟创始人</p>
-                                            <p>中高会区块链产业联盟理事长</p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </ol>
-                        </div>
-                        <!--理事-->
-                        <div class="page_leader">
-                            <div class="NoticeTitleZ">
-                                <span class="HzTitle">理事</span>
-                                <span class="more">更多》</span>
-                            </div>
-                            <ol class="page_leader_ul">
-                                <li>
-                                    <a href="">
-                                        <img src="" alt="" >
-                                        <div class="info">
-                                            <h4>曾俊杰</h4>
-                                            <p>厦门区块链协会会长</p>
-                                            <p>蚂蚁节点联盟创始人</p>
-                                            <p>中高会区块链产业联盟理事长</p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </ol>
-                        </div>
-
-
-
-                    </div>
-                    <!--组织架构-->
-                    <div class="noticeText" style="display: none">
-                        <div class="noticeTextTitleBox organizaBox">
-                            <div class="organiza">
-                                厦门市区块链协会组织架构
-                            </div>
-                            <!--<div class="NoticTime">-->
-                                <!--<span>作者：</span><span>秘书处</span>-->
-                                <!--<span class="TimeFb">发布时间：</span><span>2019-12-13 17:00:30</span>-->
-                                <!--<span class="TimeFb"><img src="images/guankan.png" alt="" width="3%"> 650</span>-->
-                            <!--</div>-->
-                        </div>
-                        <div class="NoticeContent">
-                            <img src="images/originaze.png" alt="" width="80%">
-
-                        </div>
-
-
-                    </div>
-                    <!--联系我们-->
-                    <div class="noticeText">
-                        <div class="noticeTextTitleBox">
-                            <div class="TitleNotic">
-                                联系我们
-                            </div>
-                            <div class="NoticTime">
-                                <span>作者：</span><span>秘书处</span>
-                                <span class="TimeFb">发布时间：</span><span>2019-12-13 17:00:30</span>
-                                <span class="TimeFb"><img src="images/guankan.png" alt="" width="3%"> 650</span>
-                            </div>
-                        </div>
-                        <div class="NoticeContent">
-                            <img src="images/xiehuiLogo.png" alt="">
-                            <p>联系人：秘书处</p>
-                            <p>联系电话：0592-6600592/18559657231；</p>
-                            <p>办公地址：厦门市湖里区枋湖西路189号二层209单元。</p>
                         </div>
                     </div>
-
                 </div>
             </div>
             <!--底部黑色-->
             <div style="clear: both"></div>
         </div>
-
     </div>
 
     <!--#include file="footer.html"-->
@@ -511,9 +270,5 @@
 </body>
 </html>
 <script>
-    $(".Title_Tro_ul li a").eq(0).addClass("actict");
-    $(".Title_Tro_ul li a").click(function () {
-        $(this).addClass("actict");
-        $(this).siblings("li").removeClass("actict")
-    })
+    $(".Title_Tro_ul li a").eq(1).addClass("actict");
 </script>

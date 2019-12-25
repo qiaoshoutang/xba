@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>厦门区块链协会(活动详情页)</title>
+    <title>厦门区块链协会(新闻内容)</title>
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/association_dynamics.css">
     <link rel="stylesheet" href="css/notice.css">
@@ -20,7 +20,7 @@
         <div class="nav_small">
 
             <img src="images/location.png" alt="" class="locationAA">
-            <a href="">首页</a>><a href="">协会活动</a>><a href="">活动预告</a>
+            <a href="">首页</a>><a href="">协会活动</a>><a href="">活动详情</a>
         </div>
         <!--主要内容-->
         <div class="Ass_content_box">
@@ -29,26 +29,26 @@
                 <div class="leftAss">
                     <div class="Title_Ass">
                         <div class="topTitle">
-                            <span class="TitleBlue">
-
-                            </span>
+                            <span class="TitleBlue"></span>
                             协会活动
                         </div>
                         <ul class="Title_Ass_ul">
-                            <li><a href=''>活动预告</a></li>
-                            <li><a href=''>活动回顾</a></li>
-                            <li><a href=''>国际峰会</a></li>
+                            <li><a href='/xbaactivity/11'>活动预告</a></li>
+                            <li><a href='/xbaactivity/12'>活动回顾</a></li>
+                            <li><a href='/xbaactivity/13'>国际峰会</a></li>
                         </ul>
                     </div>
                     <div class="Title_Ass AssGg">
                         <div class="topTitle_Gg">
-                            <div class="topTitle_Ggg">热门新闻</div>
-                            <!--<div class="moreAnd">更多</div>-->
+                            <div class="topTitle_Ggg">通知公告</div>
+                            <div class="moreAnd" onclick='window.location.href="/xbadynamic/4"'>
+                                更多
+                            </div>
                         </div>
                         <div class="AssGgUl">
                             <ul>
                                 <!--{foreach name='noticeList' item='vo'}-->
-                                <li><a href="">{$vo['title']}</a></li>
+                                <li><a href="/xbacontent/{$vo['content_id']}">{$vo['title']}</a></li>
                                 <!--{/foreach}-->
                             </ul>
                         </div>
@@ -59,19 +59,16 @@
                     <div class="noticeText">
                         <div class="noticeTextTitleBox">
                             <div class="TitleNotic">
-                                厦门市区块链协会在厦正式成立
+                                {$contentInfo['title']}
                             </div>
                             <div class="NoticTime">
-                                <span>作者：</span><span>秘书处</span>
-                                <span class="TimeFb">发布时间：</span><span>2019-12-13 17:00:30</span>
-                                <span class="TimeFb"><img src="images/guankan.png" alt="" width="3%"> 650</span>
+                                <span>作者：</span><span>{$contentInfo['author']}</span>
+                                <span class="TimeFb">发布时间：</span><span>{$contentInfo.time|format_time='Y-m-d H:i:s'}</span>
+                                <span class="TimeFb"><img src="images/guankan.png" alt="" width="3%">{$contentInfo['views']}</span>
                             </div>
                         </div>
                         <div class="NoticeContent">
-                            <img src="images/xiehuiLogo.png" alt="">
-                            <p>厦门市区块链协会(XBA)是厦门区块链协会，正式成立于2019年12月，是依法在明政部门政策在指导下城里的非营利性社会组织。</p>
-                            <p>协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容，</p>
-                            <p>促进区块链的创新和发展。</p>
+                            {$contentInfo['content']}
                         </div>
 
 

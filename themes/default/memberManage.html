@@ -68,9 +68,9 @@
                         会员动态
                     </div>
                     <ul class="Title_Ass_ul">
-                        <li><a href=''>会员动态</a></li>
-                        <li><a href=''>会员管理</a></li>
-                        <li><a href=''>服务方向</a></li>
+                        <li><a href='/xbamemberdy'>会员动态</a></li>
+                        <li><a href='/xbamanage'>会员管理</a></li>
+                        <li><a href='/xbaservice'>服务方向</a></li>
                     </ul>
                 </div>
                 <div class="Title_Ass AssGg">
@@ -89,26 +89,9 @@
             </div>
             <!--右边内容-->
             <div class="rightCon">
-                <!--会员动态-->
-                <ul style="display: none">
-                    <!--{foreach name='list' item='vo'}-->
-                    <li>
-                        <div class="list_Img_L">
-                            <img src="{$vo['image']|default='/Public/img/pic-none.png'}" alt="">
-                        </div>
-                        <div class="list_Cont_R">
-                            <div class="Cont_R_Title">
-                                {$vo['title']}
-                            </div>
-                            <div class="Cont_R_Text">
-                                {$vo['description']}
-                            </div>
-                        </div>
-                    </li>
-                    <!--{/foreach}-->
-                </ul>
+
                 <!--会员管理-->
-                <div class="Membermanage"  style="display: none">
+                <div class="Membermanage">
                     <div class="MembermanageTitle">
                         会员管理
                     </div>
@@ -157,42 +140,6 @@
 
                         <div class="manageText">
                             <p>七、会员如有严重违反本章程的行为，经理事会表决通过，予以除名。</p>
-                        </div>
-
-                        <div class="LocationAndTimeAdm">
-                            <p>厦门区块链协会</p>
-                            <p>2019年12月13日</p>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-                <!--服务方向-->
-                <div class="Membermanage">
-                    <div class="MembermanageTitle">
-                        厦门市区块链协会会员服务
-                    </div>
-                    <div class="MembermanageContent">
-                        <div class="ServiceText">
-                            <p>1.建立区块链智库，开展区块链技术普及，认知培训、开展区块链技术改造的咨询、进行产业信息交流；</p>
-                        </div>
-
-                        <div class="ServiceText">
-                            <p>2.打造服务平台，参与有关区块链的发展、改革以及与利益相关的政府决策论证，提出有关政策和立法建议，为政府政策制定献计献策。</p>
-                        </div>
-
-                        <div class="ServiceText">
-                            <p>3. 维护会员合法权益，协调会员与会员之间及其他企业的关系。</p>
-                        </div>
-
-                        <div class="ServiceText">
-                            <p>4.维护会员合法权益，协调会员与会员之间及其他企业的关系。</p>
-                        </div>
-
-                        <div class="ServiceText">
-                            <p>5.承办政府部门及会员单位委托的其他工作事项。</p>
                         </div>
 
                         <div class="LocationAndTimeAdm">

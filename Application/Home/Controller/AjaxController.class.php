@@ -8,45 +8,33 @@ use Home\Controller\SiteController;
 class AjaxController extends SiteController {
     
     
-    //活动详情加载更多图片
-    public function get_activity_image(){
+    //入会申请提交
+    public function applySubmit(){
         
-        $page_num = I('post.pageNum',0,'intval');
-        $album_id = I('post.album_id',0,'intval');
-        
-        
-        if(!($album_id&&$page_num)){
-            $data['code'] = 0;
-            $data['info'] = '参数不能为空';
-            $this->ajaxReturn($data);
-            exit;
+        $data = $_POST;
+        if(empty($data['name'])||empty($data['company'])||empty($data['position'])){
+            $rdata['code'] = 0;
+            $rdata['info'] = '参数不能为空';
+            $this->ajaxReturn($rdata);
         }
-        $imageMod  = D('Admin/Image');
+        $applyMod = D('Admin/Apply');
         
-        $where['fid'] = $album_id;
-        $where['status'] = 1;
-
-        $page_record_num = 6;
-        $limit = $page_record_num*$page_num.','.$page_record_num;
+        $info = $applyMod->getWhereInfo(['name'=>$data['name'],'company'=>$data['company'],'position'=>$data['position']]);
+        if($info){
+            $rdata['code'] = 0;
+            $rdata['info'] = '已存在该表单，请勿重复提交';
+            $this->ajaxReturn($rdata);
+        }
+        $res = $applyMod->saveData('add');
         
-        $image_list = $imageMod->loadList($where,$limit,'order_id asc');
-
-
-        $imageArr=array();
-        foreach($image_list as $val){
-            $imageArr[]['articlePic'] = C('cdnurl').$val['img_url'];
+        if(!$res){
+            $rdata['code'] = 0;
+            $rdata['info'] = '提交表单失败';
+            $this->ajaxReturn($rdata);
         }
-
-        if($imageArr){
-            
-            $data['code'] = 1;
-            $data['info'] = '获取数据成功';
-            $data['list'] = $imageArr;
-        }else{
-            $data['code'] = 2;
-            $data['info'] = '没有数据了';
-        }
-        $this->ajaxReturn($data);
+        $rdata['code'] = 1;
+        $rdata['info'] = '提交成功，工作人员将在一周内给与答复';
+        $this->ajaxReturn($rdata);
     }
    
     

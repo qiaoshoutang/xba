@@ -11,6 +11,23 @@ return array(
 	    'xbahome'=>'Home/Index/index',
 	    'xbadynamic/:type'=>'Home/Index/dynamic',
 	    'xbacontent/:content_id'  =>'Home/Index/newsContent',
+	    'xbaabout/1'   =>'Home/Index/description',   //协会简介
+	    'xbaabout/2'   =>'Home/Index/constitution',  //协会章程
+	    'xbaabout/3'   =>'Home/Index/leader',        //协会领导
+	    'xbaabout/4'   =>'Home/Index/framework',     //协会框架
+	    'xbaabout/5'   =>'Home/Index/contact',       //联系我们
+	    'xbaactivity/:type'=>'Home/Index/activity',  //协会活动
+	    'activityContent/:content_id' =>'Home/Index/activityContent', //活动详情
+	    'xbamemberdy'   =>'Home/Index/memberDynamic', //会员动态
+	    'xbamembercontent/:content_id'=>'Home/Index/memberContent', //会员动态详情
+	    'xbamanage'    =>'Home/Index/memberManage', //会员管理
+	    'xbaservice'   =>'Home/Index/memberService', //会员服务
+	    'applydemand'     =>'Home/Index/applyDemand', //入会要求
+	    'applyprocedure'  =>'Home/Index/applyProcedure', //入会流程
+	    'applyguide'     =>'Home/Index/applyGuide', //入会指南
+	    'applytable'     =>'Home/Index/applyTable', //入会申请
+	    
+	    
 	    
 	    'home_m'          =>  'Home/Mobile/index',
 	    'memo_m'          =>  'Home/Mobile/memo',

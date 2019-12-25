@@ -2,9 +2,9 @@
 namespace Admin\Model;
 use Think\Model;
 /**
- * 内容操作
+ * 申请内容操作
  */
-class CouncilModel extends Model {
+class ApplyModel extends Model {
     protected $_auto=array(
         array('time','time',1,'function')
     );
@@ -13,7 +13,7 @@ class CouncilModel extends Model {
      * 获取列表
      * @return array 列表
      */
-    public function loadList($where = array(), $limit = 50, $order = 'order_id desc'){
+    public function loadList($where = array(), $limit = 50, $order = 'id desc'){
         
         $list = $this->where($where)
                     ->limit($limit)
@@ -85,7 +85,7 @@ class CouncilModel extends Model {
             if(empty($data['id'])){
                 return false;
             }
-            $status = $this->save();
+            $status = $this->save($data);
             if($status === false){
                 return false;
             }

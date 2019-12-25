@@ -98,23 +98,206 @@ class IndexController extends SiteController {
         //公告
         $noticeList = D('Admin/Content')->loadList(['status'=>2,'class_id'=>4],10,'time desc');
 
-
         $this->assign('contentInfo',$contentInfo);
         $this->assign('noticeList',$noticeList);
         $this -> siteDisplay('newsContent');
     }
     
-    //团队结束
-    public function team(){
-        $this->assign('navi_num',4);
-        $this -> siteDisplay('team');
+    //协会简介
+    public function description(){
+
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+        $this -> siteDisplay('description');
+    }
+    //协会章程
+    public function constitution(){
+
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+        
+        $this -> siteDisplay('constitution');
+    }
+    //协会领导
+    public function leader(){
+
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+        $this -> siteDisplay('leader');
+    }
+    //协会框架
+    public function framework(){
+
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+        $this -> siteDisplay('framework');
+    }
+    //联系我们
+    public function contact(){
+
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+        $this -> siteDisplay('contact');
     }
     
-    //商务合作
-    public function cooperation(){
-        $this->assign('navi_num',5);
-        $this -> siteDisplay('cooperation');
+    //协会活动
+    public function activity(){
+        
+        $type = I('request.type',11,'intval');
+        
+        $contentMod = D('Admin/Content');
+        
+        $list = $contentMod->loadList(['class_id'=>$type,'status'=>2],10);
+        
+        //热门新闻
+        $newsList = $contentMod->loadList(['class_id'=>['in',[1,2,3]],'status'=>2],5,'views desc');
+
+        $this->assign('list',$list);
+        $this->assign('newsList',$newsList);
+        $this -> siteDisplay('activity');
     }
+    //活动详情
+    public function activityContent(){
+        
+        $content_id = I('request.content_id',0);
+        
+        $contentMod = D('Article/ContentArticle');
+        
+        
+        $contentInfo = $contentMod->getInfo($content_id);
+        if(empty($contentInfo)){
+            exit('找不到该内容');
+        }
+        
+        M('content')->where(['content_id'=>$content_id])->setInc('views'); //浏览自增1
+        
+        $contentInfo['content'] = html_out($contentInfo['content']);
+        
+        //公告
+        $noticeList = D('Admin/Content')->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('contentInfo',$contentInfo);
+        $this->assign('noticeList',$noticeList);
+        $this -> siteDisplay('activityContent');
+    }
+    
+    
+    //会员动态
+    public function memberDynamic(){
+        
+        $contentMod = D('Admin/Content');
+        
+        $list = $contentMod->loadList(['class_id'=>21,'status'=>2],10);
+               
+        //公告
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        
+        $this->assign('list',$list);
+        $this->assign('noticeList',$noticeList);
+        $this -> siteDisplay('memberDynamic');
+    }
+    
+    //会员动态详情
+    public function memberContent(){
+        
+        $content_id = I('request.content_id',0);
+        
+        $contentMod = D('Article/ContentArticle');
+        
+        
+        $contentInfo = $contentMod->getInfo($content_id);
+        if(empty($contentInfo)){
+            exit('找不到该内容');
+        }
+        
+        M('content')->where(['content_id'=>$content_id])->setInc('views'); //浏览自增1
+        
+        $contentInfo['content'] = html_out($contentInfo['content']);
+        
+        //热门新闻
+        $newsList = D('Admin/Content')->loadList(['class_id'=>['in',[1,2,3]],'status'=>2],5,'views desc');
+
+        $this->assign('contentInfo',$contentInfo);
+        $this->assign('newsList',$newsList);
+        $this -> siteDisplay('memberContent');
+    }
+    
+    
+    //会员管理
+    public function memberManage(){
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+        
+        $this -> siteDisplay('memberManage');
+    }
+    //会员服务
+    public function memberService(){
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+        
+        $this -> siteDisplay('memberService');
+    }
+    
+    //入会要求
+    public function applyDemand(){
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+        $this -> siteDisplay('applyDemand');
+    }
+    //入会流程
+    public function applyProcedure(){
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+        $this -> siteDisplay('applyProcedure');
+    }
+    //入会指南
+    public function applyGuide(){
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+        $this -> siteDisplay('applyGuide');
+    }
+    //入会申请
+    public function applyTable(){
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+        $this -> siteDisplay('applyTable');
+    }
+
+    
     
     //理事单位
     public function council(){
@@ -173,12 +356,7 @@ class IndexController extends SiteController {
         $this->assign('navi_num',6);
         $this -> siteDisplay('recruit');
     }
-    //关于我们
-    public function aboutUs(){
 
-        $this->assign('navi_num',6);
-        $this -> siteDisplay('aboutUs');
-    }
     
     /**********************************************************************/
     

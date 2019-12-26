@@ -38,7 +38,7 @@
 }
 .Title_Ass{
     width: 100%;
-    height: 305px;
+    height: 285px;
     background: white;
     overflow: hidden;
 }
@@ -68,11 +68,11 @@
 }
 .Title_Ass_ul li{
     text-align: center;
-    font-size: 21px;
+    font-size: 15px;
     border-top: 1px silver dashed;
-    height: 65px;
-    line-height: 65px;
-    font-weight: 250;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 300;
 }
 .Title_Ass_ul li a{
     color: black;
@@ -132,6 +132,7 @@
 .rightCon{
     width: 73%;
     float: right;
+    margin-bottom: 50px;
 }
 .rightCon ul{
     width: 100%;

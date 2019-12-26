@@ -197,7 +197,9 @@
                     <div class="box-right-Text">
                         <ul>
                             <!--{foreach name='list3' item='vo'}-->
-                            <li><a href="/xbacontent/{$vo.content_id}">{$vo['title']}</a></li>
+                            <li>
+                                <a href="/xbacontent/{$vo.content_id}">{$vo['title']}</a>
+                            </li>
                             <!--{/foreach}-->
                         </ul>
                     </div>
@@ -208,25 +210,18 @@
             <div class="Association-activities">
                 <div class="Ass-Ac-Title">
                     <div class="Ass-Ac-Hd">协会活动</div>
-                    <div class="MoreAndM"><a href="">更多</a></div>
+                    <div class="MoreAndM"><a href="/xbaactivity/12">更多</a></div>
                 </div>
                 <div class="Ass-Ac-text">
                     <ul>
-                        <li>
-                            <img src="images/asd%20(2).png" alt="">
-                            <p class="Ass-Ac-text-big">厦门区块链企业联谊会暨博饼晚宴</p>
-                            <p class="Ass-Ac-text-small">六月，是一个缤纷多彩的季节，告别了温柔的春风，迎来了火热的夏天。 6月13日下午</p>
+                    <!--{foreach name='activityList' item='vo'}-->
+                        <li onclick='window.location.href="/activityContent/{$vo.content_id}"'>
+                            <img src="{$vo['image']}" alt="">
+                            <p class="Ass-Ac-text-big">{$vo['title']}</p>
+                            <p class="Ass-Ac-text-small">{$vo['description']}</p>
                         </li>
-                        <li>
-                            <img src="images/asd%20(1).png" alt="">
-                            <p class="Ass-Ac-text-big">厦门区块链企业联谊会暨博饼晚宴</p>
-                            <p class="Ass-Ac-text-small">六月，是一个缤纷多彩的季节，告别了温柔的春风，迎来了火热的夏天。 6月13日下午</p>
-                        </li>
-                        <li>
-                            <img src="images/asd%20(4).png" alt="">
-                            <p class="Ass-Ac-text-big">厦门区块链企业联谊会暨博饼晚宴</p>
-                            <p class="Ass-Ac-text-small">六月，是一个缤纷多彩的季节，告别了温柔的春风，迎来了火热的夏天。 6月13日下午</p>
-                        </li>
+                    <!--{/foreach}-->
+
                     </ul>
                 </div>
             </div>

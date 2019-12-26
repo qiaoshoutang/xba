@@ -1,4 +1,4 @@
-<h3>文章列表</h3>
+<h3>活动列表</h3>
 <admin:panel >
   <admin:tabletool filter="true" keyword="{$pageMaps.keyword}">
     <select name="status" id="class_id" class="form-element">
@@ -49,6 +49,11 @@
   </admin:table>
   <admin:tablefoot action="true" item="删除" value="4" />
 </admin:panel>
+<style>
+#table img{
+  height:150px;
+}
+</style>
 <script type="text/javascript" charset="utf-8">
 	Do.ready('base',function() {
 		//移动操作

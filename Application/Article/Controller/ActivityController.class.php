@@ -71,6 +71,9 @@ class ActivityController extends AdminController {
         $limit = $this->getPageLimit($count,20);
         $list = $contentMod->loadList($where,$limit);
 
+        foreach($list as $key=>$val){
+            $list[$key]['content'] = html_out($val['content']);
+        }
         //位置导航
         $breadCrumb = array('文章列表'=>U());
         //模板传值

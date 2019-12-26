@@ -49,7 +49,7 @@ class MenuService{
 		            array(
 		                'name' => '国际峰会',
 		                'url' =>  U('Article/Activity/index',array('class_id'=>13)),
-		                'order' => 2
+		                'order' => 3
 		            )
 		        )
 		    ),

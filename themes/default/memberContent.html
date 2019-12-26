@@ -18,7 +18,6 @@
     <div class="text-content">
         <!--小的导航栏-->
         <div class="nav_small">
-
             <img src="images/location.png" alt="" class="locationAA">
             <a href="">首页</a>><a href="">协会会员</a>><a href="">会员动态</a>
         </div>
@@ -29,15 +28,13 @@
                 <div class="leftAss">
                     <div class="Title_Ass">
                         <div class="topTitle">
-                            <span class="TitleBlue">
-
-                            </span>
+                            <span class="TitleBlue"></span>
                             会员动态
                         </div>
                         <ul class="Title_Ass_ul">
-                            <li><a href=''>会员动态</a></li>
-                            <li><a href=''>会员管理</a></li>
-                            <li><a href=''>服务方向</a></li>
+                            <li><a href='/xbamemberdy'>会员动态</a></li>
+                            <li><a href='/xbamanage'>会员管理</a></li>
+                            <li><a href='/xbaservice'>服务方向</a></li>
                         </ul>
                     </div>
                     <div class="Title_Ass AssGg">
@@ -47,8 +44,8 @@
                         </div>
                         <div class="AssGgUl">
                             <ul>
-                                <!--{foreach name='noticeList' item='vo'}-->
-                                <li><a href="">{$vo['title']}</a></li>
+                                <!--{foreach name='newsList' item='vo'}-->
+                                <li><a href="/xbacontent/{$vo['content_id']}">{$vo['title']}</a></li>
                                 <!--{/foreach}-->
                             </ul>
                         </div>
@@ -59,19 +56,16 @@
                     <div class="noticeText">
                         <div class="noticeTextTitleBox">
                             <div class="TitleNotic">
-                                厦门市区块链协会在厦正式成立
+                                {$contentInfo['title']}
                             </div>
                             <div class="NoticTime">
-                                <span>作者：</span><span>秘书处</span>
-                                <span class="TimeFb">发布时间：</span><span>2019-12-13 17:00:30</span>
-                                <span class="TimeFb"><img src="images/guankan.png" alt="" width="3%"> 650</span>
+                                <span>作者：</span><span>{$contentInfo['author']}</span>
+                                <span class="TimeFb">发布时间：</span><span>{$contentInfo.time|format_time='Y-m-d H:i:s'}</span>
+                                <span class="TimeFb"><img src="images/guankan.png" alt="" width="3%">{$contentInfo['views']}</span>
                             </div>
                         </div>
                         <div class="NoticeContent">
-                            <img src="images/xiehuiLogo.png" alt="">
-                            <p>厦门市区块链协会(XBA)是厦门区块链协会，正式成立于2019年12月，是依法在明政部门政策在指导下城里的非营利性社会组织。</p>
-                            <p>协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容，</p>
-                            <p>促进区块链的创新和发展。</p>
+                            {$contentInfo['content']}
                         </div>
 
 

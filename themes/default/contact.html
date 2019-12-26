@@ -2,14 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>厦门区块链协会(公告内容)</title>
+    <title>厦门区块链协会(联系我们)</title>
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/association_dynamics.css">
     <link rel="stylesheet" href="css/notice.css">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/aboutUs.css">
 </head>
 <style>
-    .NoticeContent img{
-        margin:0 auto;
+    .Title_Tro_ul{
+        width: 80%;
+        margin: 20px auto;
+        border-bottom:1px silver dashed ;
+    }
+    .Title_Tro_ul li{
+        text-align: center;
+        font-size: 15px;
+        border-top: 1px silver dashed;
+        height: 40px;
+        line-height: 40px;
+        font-weight: 300;
+    }
+    .Title_Tro_ul li a{
+        text-decoration: none;
+        color: black;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+    .Title_Tro_ul li a:hover{
+        font-weight: bold;
+        color: #5a8bff;
+    }
+    .actict{
+        color: #5a8bff!important;
+        font-weight: bold;
+    }
+    .organizaBox{
+        margin-top: 20px!important;
+    }
+    .organiza{
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+        position: relative;
+        top: 40px;
+    }
+    .NoticeContent{
+       text-align: center;
+    }
+    .NoticeContent p{
+        text-align: left;
     }
 </style>
 <body>
@@ -25,7 +68,7 @@
         <div class="nav_small">
 
             <img src="images/location.png" alt="" class="locationAA">
-            <a href="">首页</a>><a href="">协会动态</a>><a href="">协会新闻</a>
+            <a href="">首页</a>><a href="">关于协会</a>><a href="">联系我们</a>
         </div>
         <!--主要内容-->
         <div class="Ass_content_box">
@@ -37,23 +80,25 @@
                             <span class="TitleBlue">
 
                             </span>
-                            协会动态
+                            协会简介
                         </div>
-                        <ul class="Title_Ass_ul">
-                            <li><a href='/xbadynamic/1'>协会新闻</a></li>
-                            <li><a href='/xbadynamic/2'>国际资讯</a></li>
-                            <li><a href='/xbadynamic/3'>国内要闻</a></li>
+                        <ul class="Title_Tro_ul">
+                            <li><a href='/xbaabout/1'>协会简介</a></li>
+                            <li><a href='/xbaabout/2'>协会章程</a></li>
+                            <li><a href='/xbaabout/3'>协会领导</a></li>
+                            <li><a href='/xbaabout/4'>组织架构</a></li>
+                            <li><a href='/xbaabout/5'>联系我们</a></li>
                         </ul>
                     </div>
                     <div class="Title_Ass AssGg">
                         <div class="topTitle_Gg">
                             <div class="topTitle_Ggg">通知公告</div>
-                            <div class="moreAnd">更多</div>
+                            <div class="moreAnd" onclick='window.location.href="/xbadynamic/4"'>更多</div>
                         </div>
                         <div class="AssGgUl">
                             <ul>
                                 <!--{foreach name='noticeList' item='vo'}-->
-                                <li><a href="">{$vo['title']}</a></li>
+                                <li><a href="/xbacontent/{$vo.content_id}">{$vo['title']}</a></li>
                                 <!--{/foreach}-->
                             </ul>
                         </div>
@@ -61,27 +106,21 @@
                 </div>
                 <!--右边内容-->
                 <div class="rightCon">
+
+                    <!--联系我们-->
                     <div class="noticeText">
                         <div class="noticeTextTitleBox">
                             <div class="TitleNotic">
-                                厦门市区块链协会在厦正式成立
-                            </div>
-                            <div class="NoticTime">
-                                <span>作者：</span><span>秘书处</span>
-                                <span class="TimeFb">发布时间：</span><span>2019-12-13 17:00:30</span>
-                                <span class="TimeFb"><img src="images/guankan.png" alt="" width="3%"> 650</span>
+                                联系我们
                             </div>
                         </div>
                         <div class="NoticeContent">
                             <img src="images/xiehuiLogo.png" alt="">
-                            <p>厦门市区块链协会(XBA)是厦门区块链协会，正式成立于2019年12月，是依法在明政部门政策在指导下城里的非营利性社会组织。</p>
-                            <p>协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容协会内容，</p>
-                            <p>促进区块链的创新和发展。</p>
+                            <p>联系人：秘书处</p>
+                            <p>联系电话：0592-6600592/18559657231；</p>
+                            <p>办公地址：厦门市湖里区枋湖西路189号二层209单元。</p>
                         </div>
-
-
                     </div>
-
                 </div>
             </div>
             <!--底部黑色-->
@@ -95,3 +134,6 @@
 </div>
 </body>
 </html>
+<script>
+    $(".Title_Tro_ul li a").eq(4).addClass("actict");
+</script>

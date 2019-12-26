@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>厦门区块链协会(协会活动)</title>
+    <title>厦门区块链协会协会会员</title>
     <link rel="stylesheet" href="css/association_dynamics.css">
     <link rel="stylesheet" href="css/public.css">
 </head>
@@ -57,7 +57,7 @@
         <div class="nav_small">
 
             <img src="images/location.png" alt="" class="locationAA">
-            <a href="">首页</a>><a href="">协会活动</a>><a href="">活动预告</a>
+            <a href="">首页</a>><a href="">协会会员</a>><a href="">会员动态</a>
         </div>
         <!--主要内容-->
         <div class="Ass_content">
@@ -65,18 +65,18 @@
             <div class="leftAss">
                 <div class="Title_Ass">
                     <div class="topTitle">
-                        协会活动
+                        会员动态
                     </div>
                     <ul class="Title_Ass_ul">
-                        <li><a href=''>活动预告</a></li>
-                        <li><a href=''>活动回顾</a></li>
-                        <li><a href=''>国际峰会</a></li>
+                        <li><a href='/xbamemberdy'>会员动态</a></li>
+                        <li><a href='/xbamanage'>会员管理</a></li>
+                        <li><a href='/xbaservice'>服务方向</a></li>
                     </ul>
                 </div>
                 <div class="Title_Ass AssGg">
                     <div class="topTitle_Gg">
-                        <div class="topTitle_Ggg">热门新闻</div>
-                        <!--<div class="moreAnd">更多</div>-->
+                        <div class="topTitle_Ggg">通知公告</div>
+                        <div class="moreAnd">更多</div>
                     </div>
                     <div class="AssGgUl">
                         <ul>
@@ -92,7 +92,7 @@
                 <!--会员动态-->
                 <ul>
                     <!--{foreach name='list' item='vo'}-->
-                    <li>
+                    <li onclick='window.location.href="/xbamembercontent/{$vo.content_id}"'>
                         <div class="list_Img_L">
                             <img src="{$vo['image']|default='/Public/img/pic-none.png'}" alt="">
                         </div>
@@ -107,7 +107,6 @@
                     </li>
                     <!--{/foreach}-->
                 </ul>
-
             </div>
         </div>
         <!--底部黑色-->

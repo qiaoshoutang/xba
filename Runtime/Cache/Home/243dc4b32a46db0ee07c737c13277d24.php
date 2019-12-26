@@ -46,7 +46,7 @@
                     </div>
                     <div class="AssGgUl">
                         <ul>
-                            <?php if(is_array($noticeList)): foreach($noticeList as $key=>$vo): ?><li><a href=""><?php echo ($vo['title']); ?></a></li><?php endforeach; endif; ?>
+                            <?php if(is_array($noticeList)): foreach($noticeList as $key=>$vo): ?><li><a href="/xbacontent/<?php echo ($vo["content_id"]); ?>"><?php echo ($vo['title']); ?></a></li><?php endforeach; endif; ?>
                         </ul>
                     </div>
                 </div>

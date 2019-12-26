@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>厦门区块链协会(入会申请)</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/association_dynamics.css">
+    <link rel="stylesheet" href="css/notice.css">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/aboutUs.css">
+
+</head>
+<style>
+    .Title_Apply{
+        width: 100%;
+        height: 285px;
+        background: white;
+        overflow: hidden;
+    }
+    .Title_Tro_ul{
+        width: 80%;
+        margin: 20px auto;
+        border-bottom:1px silver dashed ;
+    }
+    .Title_Tro_ul li{
+        text-align: center;
+        font-size: 15px;
+        border-top: 1px silver dashed;
+        height: 50px;
+        line-height: 50px;
+        font-weight: 300;
+    }
+    .Title_Tro_ul li a{
+        text-decoration: none;
+        color: black;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+    .Title_Tro_ul li a:hover{
+        font-weight: bold;
+        color: #5a8bff;
+    }
+    .actict{
+        color: #5a8bff!important;
+        font-weight: bold;
+    }
+    .AdmissionRequritBox{
+        width: 100%;
+
+    }
+    .TitleAdm{
+        border-bottom: 1px black solid;
+        width: 85%;
+        height: 75px;
+        line-height: 75px;
+        margin: 30px auto;
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .RequrtDetail{
+        width: 85%;
+        margin: 0 auto;
+        text-align: left;
+        font-size:19px;
+        line-height: 180%;
+    }
+    .Detail_p{
+        margin-top: 25px;
+    }
+    .LocationAndTimeAdm{
+        text-align: right;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+    .template-form{
+        padding: 30px;
+        background: #fff;
+        overflow: hidden;
+        padding-bottom: 160px;
+        position: relative;
+    }
+    .template-form input[type=text]{
+        padding: 0 10px;
+        border: 1px solid #ddd;
+        height: 28px;
+        width: 278px;
+        position: absolute;
+        right: 195px;
+    }
+    .template-form select{
+        padding: 0 10px;
+        border: 1px solid #ddd;
+        height: 28px;
+        width: 300px;
+        position: absolute;
+        right: 195px;
+    }
+    .FormName{
+        width: 85px;
+        line-height: 30px;
+        text-align: right;
+        position: absolute;
+        left: 220px;
+        top: 0;
+        font-weight: normal;
+
+    }
+    .formBox{
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        height: 50px;
+    }
+    .textareaBox{
+        width: 100%;
+        height: 125px;
+        position: relative;
+    }
+    .textareaBox textarea{
+        position: absolute;
+        left: 320px;
+        resize: none;
+        width: 300px;
+        height: 100px;
+        border: 1px solid #ddd;
+        font-family: 'Microsoft Yahei';
+    }
+    #btn_submit{
+        margin-left: 320px;
+        border: 0;
+        border-radius: 4px;
+        width: 100px;
+        height: 35px;
+        background: #1187de;
+        color: #fff;
+        line-height: 35px;
+        cursor: pointer;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .RhLc{
+        width: 100%;
+        text-align: center;
+    }
+</style>
+<body>
+<div class="box">
+    <!--#include file="header.html"-->
+    <!--动态banner-->
+    <div class="banner_Dt">
+        <img src="images/bannerDt.png" alt="">
+    </div>
+    <!--底下内容-->
+    <div class="text-content">
+        <!--小的导航栏-->
+        <div class="nav_small">
+
+            <img src="images/location.png" alt="" class="locationAA">
+            <a href="">首页</a>><a href="">会员申请</a>><a href="">入会要求</a>
+        </div>
+        <!--主要内容-->
+        <div class="Ass_content_box">
+            <div class="Ass_content">
+                <!--左边导航-->
+                <div class="leftAss">
+                    <div class="Title_Apply">
+                        <div class="topTitle">
+                            <span class="TitleBlue">
+
+                            </span>
+                            会员申请
+                        </div>
+                        <ul class="Title_Tro_ul">
+                            <li><a href='/applydemand'>入会要求</a></li>
+                            <li><a href='/applyprocedure'>入会流程</a></li>
+                            <li><a href='/applyguide'>入会指南</a></li>
+                            <li><a href='/applytable'>入会申请</a></li>
+                        </ul>
+                    </div>
+                    <div class="Title_Ass AssGg">
+                        <div class="topTitle_Gg">
+                            <div class="topTitle_Ggg">通知公告</div>
+                            <div class="moreAnd" onclick='window.location.href="/xbadynamic/4"'>更多</div>
+                        </div>
+                        <div class="AssGgUl">
+                            <ul>
+                                <!--{foreach name='noticeList' item='vo'}-->
+                                <li><a href="/xbacontent/{$vo.content_id}">{$vo['title']}</a></li>
+                                <!--{/foreach}-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--右边内容-->
+                <div class="rightCon">
+                    <!--入会申请-->
+                    <div class="AdmissionRequritBox">
+                        <div class="TitleAdm">
+                            厦门市区块链协会入会申请
+                        </div>
+                        <form class="template-form" id='apply_table'>
+                            <div class="formBox">
+                                <span class="FormName" >真实姓名</span>
+                                <input type="text" placeholder="请填写真实姓名" name="name">
+                            </div>
+                            <div class="formBox">
+                                <span class="FormName">手机号</span>
+                                <input type="text" placeholder="请填写手机号" name="phone">
+                            </div>
+                            <div class="formBox">
+                                <span class="FormName">微信</span>
+                                <input type="text" placeholder="请填写微信" name="wechat">
+                            </div>
+                            <div class="formBox">
+                                <span class="FormName">邮箱</span>
+                                <input type="text" placeholder="请填写邮箱" name="mailbox">
+                            </div>
+                            <div class="formBox">
+                                <span class="FormName">单位</span>
+                                <input type="text" placeholder="请填写单位" name="company">
+                            </div>
+                            <div class="formBox">
+                                <span class="FormName">职位</span>
+                                <input type="text" placeholder="请填写所属职位" name="position">
+                            </div>
+                            <div class="textareaBox">
+                                <span class="FormName">主营业务</span>
+                                <textarea  name="business"  placeholder="请填写区块链领域探索及发展情况" id="review"></textarea>
+                            </div>
+                            <div class="formBox">
+                                <span class="FormName">申请职位</span>
+                                <select name="wantposition" id="">
+                                    <option value="理事">理事</option>
+                                    <option value="副会长">副会长</option>
+                                    <option value="监事">监事</option>
+                                </select>
+                            </div>
+
+                            <button id="btn_submit">
+                                提交
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <!--底部黑色-->
+            <div style="clear: both"></div>
+        </div>
+
+    </div>
+
+    <!--#include file="footer.html"-->
+
+</div>
+</body>
+</html>
+<script src="js/layui/layui.js"></script>
+<script>
+    layui.use('layer', function(){  //layer弹框
+        var layer = layui.layer;
+    });
+
+    $(".Title_Tro_ul li a").eq(3).addClass("actict");
+    $(".Title_Tro_ul li a").click(function () {
+        $(this).addClass("actict");
+        $(this).siblings("li").removeClass("actict")
+    })
+
+
+    $("#btn_submit").click(function () {
+        var username=$("input[name='name']").val();
+        var phoneNum=$("input[name='phone']").val();
+        var WeChat=$("input[name='wechat']").val();
+        var mailbox=$("input[name='mailbox']").val();
+        var Company=$("input[name='company']").val();
+        var post=$("input[name='position']").val();
+        var review=$("#review").val();
+
+        // if(username==''||username=="null"){
+        //      layer.msg("名字不能为空");
+        //     return false
+        // }
+        // if(phoneNum==''||phoneNum=="null"){
+        //     layer.msg("手机号码不能为空");
+        //     return false
+        // }
+        // if(WeChat==''||WeChat=="null"){
+        //     layer.msg("微信号不能为空");
+        //     return false
+        // }
+        // if(mailbox==''||mailbox=="null"){
+        //     layer.msg("邮箱不能为空");
+        //     return false
+        // }
+        // if(Company==''||Company=="null"){
+        //     layer.msg("单位不能为空");
+        //     return false
+        // }
+        // if(post==''||post=="null"){
+        //     layer.msg("职位昵称不能为空");
+        //     return false
+        // }
+
+        if(review==''||review=="null"){
+            layer.msg("主要营业不能为空");
+            return false
+        }else {
+            $.ajax({
+                type:"post",
+                url:"{:U('Home/Ajax/applySubmit')}",
+                data:$('#apply_table').serialize(),
+                success:function(data){
+                    data = $.parseJSON(data)
+                    if(data.code==1){
+                        layer.msg(data.info,{time:2000},function(){
+                            window.location.reload();
+                        });
+                        
+                    }else{
+
+                        layer.msg(data.info);
+                    }
+                }
+            }); 
+            
+            return false;
+        }
+    })
+</script>

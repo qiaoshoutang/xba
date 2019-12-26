@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="css/association_dynamics.css">
     <link rel="stylesheet" href="css/public.css">
 </head>
+<style>
+    .Title_Ass{
+    }
+</style>
 <body>
 <div class="box">
     <!--#include file="header.html"-->
@@ -28,6 +32,7 @@
             <div class="leftAss">
                 <div class="Title_Ass">
                     <div class="topTitle">
+                        <span class="TitleBlue"></span>
                         协会动态
                     </div>
                     <ul class="Title_Ass_ul">

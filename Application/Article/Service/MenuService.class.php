@@ -9,7 +9,10 @@ class MenuService{
 	 */
 	public function getAdminMenu(){
 		return array(
-            'Content' => array(
+		    'Content' => array(
+		        'name' => '新闻管理',
+		        'icon' => 'home',
+		        'order' => 5,
                 'menu' => array(
                     array(
                         'name' => '协会新闻',
@@ -28,6 +31,40 @@ class MenuService{
                     )
                 )
             ),
+		    'activit' => array(
+		        'name' => '活动管理',
+		        'icon' => 'home',
+		        'order' => 6,
+		        'menu' => array(
+		            array(
+		                'name' => '活动预告',
+		                'url' => U('Article/Activity/index',array('class_id'=>11)),
+		                'order' => 1
+		            ),
+		            array(
+		                'name' => '活动回顾',
+		                'url' =>  U('Article/Activity/index',array('class_id'=>12)),
+		                'order' => 2
+		            ),
+		            array(
+		                'name' => '国际峰会',
+		                'url' =>  U('Article/Activity/index',array('class_id'=>13)),
+		                'order' => 2
+		            )
+		        )
+		    ),
+		    'member' => array(
+		        'name' => '会员动态',
+		        'icon' => 'home',
+		        'order' => 7,
+		        'menu' => array(
+		            array(
+		                'name' => '会员动态',
+		                'url' => U('Article/Member/index',array('class_id'=>21)),
+		                'order' => 1
+		            )
+		        )
+		    ),
         );
 	}
 	

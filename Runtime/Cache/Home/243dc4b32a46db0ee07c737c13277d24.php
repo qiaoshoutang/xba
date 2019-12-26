@@ -36,10 +36,10 @@
                         协会动态
                     </div>
                     <ul class="Title_Ass_ul">
-                        <li><a href='/xbadynamic/1'>协会新闻</a></li>
-                        <li><a href='/xbadynamic/2'>国际资讯</a></li>
-                        <li><a href='/xbadynamic/3'>国内要闻</a></li>
-                        <li><a href='/xbadynamic/4'>通知公告</a></li>
+                        <li><a href='/xbadynamic/1' class="<?php if($navi_num == 1): ?>active<?php endif; ?>">协会新闻</a></li>
+                        <li><a href='/xbadynamic/2' class="<?php if($navi_num == 2): ?>active<?php endif; ?>">国际资讯</a></li>
+                        <li><a href='/xbadynamic/3' class="<?php if($navi_num == 3): ?>active<?php endif; ?>">国内要闻</a></li>
+                        <li><a href='/xbadynamic/4' class="<?php if($navi_num == 4): ?>active<?php endif; ?>">通知公告</a></li>
                     </ul>
                 </div>
                 <div class="Title_Ass AssGg">

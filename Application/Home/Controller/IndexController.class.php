@@ -73,7 +73,7 @@ class IndexController extends SiteController {
 
         $this->assign('list',$list);
         $this->assign('noticeList',$noticeList);
-        $this->assign('navi_num',3);
+        $this->assign('navi_num',$type);
         $this -> siteDisplay('dynamic');
     }
     
@@ -100,6 +100,7 @@ class IndexController extends SiteController {
 
         $this->assign('contentInfo',$contentInfo);
         $this->assign('noticeList',$noticeList);
+        $this->assign('navi_num',$contentInfo['class_id']);
         $this -> siteDisplay('newsContent');
     }
     

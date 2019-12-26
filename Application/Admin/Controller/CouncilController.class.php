@@ -15,17 +15,17 @@ class CouncilController extends AdminController
     {
         $data = array(
         	'info' => array(
-        		'name' => '理事列表',
-                'description' => '蚂蚁联盟理事列表',
+        		'name' => '会员列表',
+                'description' => '厦门区块链协会成员列表',
             ),
             'menu' => array(
                 array(
-                    'name' => '理事列表',
+                    'name' => '会员列表',
                     'url' => U('Admin/Council/index'),
-                    'icon' => 'plus',
+                    'icon' => 'list',
                 ),
                 array(
-                    'name' => '理事添加',
+                    'name' => '会员添加',
                     'url' => U('Admin/Council/add'),
                     'icon' => 'plus',
                 ),
@@ -63,7 +63,8 @@ class CouncilController extends AdminController
         $list = $councilMod->loadList($where,$limit);
         
 
-        $this->assign('statusArr',array(1=>'待处理',2=>'常务理事',3=>'理事',4=>'不通过'));
+        $this->assign('statusArr',array(1=>'显示',2=>'不显示'));
+        $this->assign('roleArr',array(1=>'会长',2=>'秘书长',3=>'副会长',4=>'监事',5=>'理事'));
         $this -> assign('pageMaps',$pageMaps);
         $this->assign('page',$this->getPageShow($pageMaps));
         $this->assign('list',$list);
@@ -72,15 +73,13 @@ class CouncilController extends AdminController
     }
     
     /**
-     * 编辑
+     * 新增
      */
     public function add(){ 
         
         if(!IS_POST){
 
             $this->assign('name','添加');
-            
-
             $this->adminDisplay('info');
         }else{
             $councilMod=D('Admin/Council');
@@ -93,7 +92,7 @@ class CouncilController extends AdminController
         }
     }
     /**
-     * 二维码编辑
+     * 编辑
      */
     public function edit(){
         
@@ -126,7 +125,7 @@ class CouncilController extends AdminController
     }
     
     /**
-     * 二维码删除
+     * 删除
      */
     public function del(){
         
@@ -140,9 +139,9 @@ class CouncilController extends AdminController
         
         if($res){
 
-            $this->success('币配置删除成功！');
+            $this->success('删除成功！');
         }else{
-            $this->error('币配置删除失败！');
+            $this->error('删除失败！');
         }
         
     }

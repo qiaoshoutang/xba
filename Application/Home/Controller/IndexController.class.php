@@ -12,20 +12,21 @@ class IndexController extends SiteController {
 
         parent::__construct ();
         header("Content-Type:text/html; charset=utf-8");
-        $detect = new \Common\Util\Mobile_Detect();
-        $ishttps = 0;
+        
+//         $detect = new \Common\Util\Mobile_Detect();
+//         $ishttps = 0;
 
-        if($_SERVER['REQUEST_SCHEME']=='https'){
-            $ishttps=1;
-        }
+//         if($_SERVER['REQUEST_SCHEME']=='https'){
+//             $ishttps=1;
+//         }
             
-        if ($detect->isMobile()){    
-            if($ishttps){
-                redirect('https://'.$_SERVER['HTTP_HOST'].'/home_m');
-            }else{
-                redirect('http://'.$_SERVER['HTTP_HOST'].'/home_m');
-            }
-        } 
+//         if ($detect->isMobile()){    
+//             if($ishttps){
+//                 redirect('https://'.$_SERVER['HTTP_HOST'].'/home_m');
+//             }else{
+//                 redirect('http://'.$_SERVER['HTTP_HOST'].'/home_m');
+//             }
+//         } 
     }
 
     //首页
@@ -60,7 +61,7 @@ class IndexController extends SiteController {
         $this->assign('list3',$list3);
         $this->assign('noticeList',$noticeList);
         $this->assign('activityList',$activityList);
-        $this -> siteDisplay('index');
+        $this->siteDisplay('index');
     }
     
     //协会动态
@@ -88,8 +89,6 @@ class IndexController extends SiteController {
 
         $contentMod = D('Article/ContentArticle');
         
-        
-
         $contentInfo = $contentMod->getInfo($content_id);
         if(empty($contentInfo)){
             exit('找不到该内容');
@@ -203,6 +202,17 @@ class IndexController extends SiteController {
         $this -> siteDisplay('activityContent');
     }
     
+    
+    //会员列表
+    public function memberList(){
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+        
+        $this -> siteDisplay('memberList');
+    }
     
     //会员动态
     public function memberDynamic(){

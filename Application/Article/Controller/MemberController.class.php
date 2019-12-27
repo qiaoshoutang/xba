@@ -45,7 +45,6 @@ class MemberController extends AdminController {
             $where['A.title'] = array('like','%'.$keyword.'%');
         }
 
-
         if(!empty($status)){
             $where['A.status'] = $status;
         }
@@ -80,6 +79,7 @@ class MemberController extends AdminController {
         if(!IS_POST){
             $breadCrumb = array('活动添加'=>U());
             $time=time();
+            
             $this->assign('time',$time);
             $this->assign('breadCrumb',$breadCrumb);
             $this->assign('name','添加');
@@ -92,9 +92,7 @@ class MemberController extends AdminController {
 			$content_id=D('ContentArticle')->saveData('add');
 
 			if($content_id){
-                
                 $this->success('内容添加成功！');
-
             }else{
                 $msg = D('ContentArticle')->getError();
                 if(empty($msg)){
@@ -133,11 +131,8 @@ class MemberController extends AdminController {
             $this->adminDisplay('info');
         }else{
             
-            if(D('ContentArticle')->saveData('edit')){
-                
-               
+            if(D('ContentArticle')->saveData('edit')){ 
                 $this->success('修改成功！',true);
-                
             }else{
                 $msg = D('ContentArticle')->getError();
                 if(empty($msg)){
@@ -210,7 +205,6 @@ class MemberController extends AdminController {
             }
         }
         $this->success('批量操作执行完毕！');
-
     }
 }
 

@@ -18,6 +18,7 @@ return array(
 	    'xbaabout/5'   =>'Home/Index/contact',       //联系我们
 	    'xbaactivity/:type'=>'Home/Index/activity',  //协会活动
 	    'activityContent/:content_id' =>'Home/Index/activityContent', //活动详情
+	    'xbamemberlist'   =>'Home/Index/memberList', //会员动态
 	    'xbamemberdy'   =>'Home/Index/memberDynamic', //会员动态
 	    'xbamembercontent/:content_id'=>'Home/Index/memberContent', //会员动态详情
 	    'xbamanage'    =>'Home/Index/memberManage', //会员管理

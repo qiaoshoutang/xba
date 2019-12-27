@@ -63,6 +63,7 @@ class ActivityController extends AdminController {
         $pageMaps = array();
         $pageMaps['keyword'] = $keyword;
         $pageMaps['status'] = $status;
+        $pageMaps['class_id'] = $class_id;
 
 
         //查询数据

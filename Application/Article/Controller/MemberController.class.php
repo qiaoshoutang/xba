@@ -38,9 +38,9 @@ class MemberController extends AdminController {
         $keyword = I('request.keyword','');
         $status = I('request.status',0,'intval');
         $class_id = I('request.class_id',0,'intval');
-        if(!empty($class_id)){
-            $where['A.class_id'] = $class_id;
-        }
+
+        $where['A.class_id'] = 21;
+
         if(!empty($keyword)){
             $where['A.title'] = array('like','%'.$keyword.'%');
         }

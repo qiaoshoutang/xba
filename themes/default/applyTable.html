@@ -283,30 +283,30 @@
         var post=$("input[name='position']").val();
         var review=$("#review").val();
 
-        // if(username==''||username=="null"){
-        //      layer.msg("名字不能为空");
-        //     return false
-        // }
-        // if(phoneNum==''||phoneNum=="null"){
-        //     layer.msg("手机号码不能为空");
-        //     return false
-        // }
-        // if(WeChat==''||WeChat=="null"){
-        //     layer.msg("微信号不能为空");
-        //     return false
-        // }
-        // if(mailbox==''||mailbox=="null"){
-        //     layer.msg("邮箱不能为空");
-        //     return false
-        // }
-        // if(Company==''||Company=="null"){
-        //     layer.msg("单位不能为空");
-        //     return false
-        // }
-        // if(post==''||post=="null"){
-        //     layer.msg("职位昵称不能为空");
-        //     return false
-        // }
+        if(username==''||username=="null"){
+             layer.msg("名字不能为空");
+            return false
+        }
+        if(phoneNum==''||phoneNum=="null"){
+            layer.msg("手机号码不能为空");
+            return false
+        }
+        if(WeChat==''||WeChat=="null"){
+            layer.msg("微信号不能为空");
+            return false
+        }
+        if(mailbox==''||mailbox=="null"){
+            layer.msg("邮箱不能为空");
+            return false
+        }
+        if(Company==''||Company=="null"){
+            layer.msg("单位不能为空");
+            return false
+        }
+        if(post==''||post=="null"){
+            layer.msg("职位昵称不能为空");
+            return false
+        }
 
         if(review==''||review=="null"){
             layer.msg("主要营业不能为空");

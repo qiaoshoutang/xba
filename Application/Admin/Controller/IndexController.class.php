@@ -29,14 +29,15 @@ class IndexController extends AdminController {
      * 首页
      */
     public function index(){
-        
+
         $basePurview = unserialize($this->loginUserInfo['base_purview']);
         $purviewInfo = service(MODULE_NAME,'Purview','getAdminPurview');
         
     	//设置目录导航
     	$breadCrumb = array('首页'=>U('Index/index'));
         $this->assign('breadCrumb',$breadCrumb);
-        $this->adminDisplay();
+
+        $this->adminDisplay('index');
     }
 }
 

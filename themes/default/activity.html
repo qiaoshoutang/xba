@@ -68,9 +68,9 @@
                         协会活动
                     </div>
                     <ul class="Title_Ass_ul">
-                        <li><a href='/xbaactivity/11'>活动预告</a></li>
-                        <li><a href='/xbaactivity/12'>活动回顾</a></li>
-                        <li><a href='/xbaactivity/13'>国际峰会</a></li>
+                        <li><a href='/xbaactivity/11' class="<!--{if condition='$navi_num eq 11'}-->active<!--{/if}-->">活动预告</a></li>
+                        <li><a href='/xbaactivity/12' class="<!--{if condition='$navi_num eq 12'}-->active<!--{/if}-->">活动回顾</a></li>
+                        <li><a href='/xbaactivity/13' class="<!--{if condition='$navi_num eq 13'}-->active<!--{/if}-->">国际峰会</a></li>
                     </ul>
                 </div>
                 <div class="Title_Ass AssGg">
@@ -89,10 +89,9 @@
             </div>
             <!--右边内容-->
             <div class="rightCon">
-                <!--会员动态-->
                 <ul>
                     <!--{foreach name='list' item='vo'}-->
-                    <li onclick='window.location.href="/xbacontent/{$vo.content_id}"'>
+                    <li onclick='window.location.href="/activityContent/{$vo.content_id}"'>
                         <div class="list_Img_L">
                             <img src="{$vo['image']|default='/Public/img/pic-none.png'}" alt="">
                         </div>

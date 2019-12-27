@@ -11,14 +11,7 @@ class MenuService{
 
         //返回菜单
 		return array(
-            'Content' => array(
-                'name' => '动态管理',
-                'icon' => 'home',
-                'order' => 5,
-                'menu' => array(
 
-                )
-            ),
         );
 	}
 	

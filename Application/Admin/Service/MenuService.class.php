@@ -23,48 +23,22 @@ class MenuService{
             ),
 
 	    
-		    'Activity' => array(
-		        'name' => '活动',
-		        'order' => 4,
-		        'menu' => array(
-		            array(
-		                'name' => '活动列表',
-		                'url' => U('Admin/Activity/activityList'),
-		                'order' => 1
-		            ),
-		            array(
-		                'name' => '活动添加',
-		                'url' => U('Admin/Activity/activityAdd'),
-		                'order' => 2
-		            ),
-		            array(
-		                'name' => '相册列表',
-		                'url' => U('Admin/Activity/albumList'),
-		                'order' => 3
-		            ),
-		            array(
-		                'name' => '相册添加',
-		                'url' => U('Admin/Activity/albumAdd'),
-		                'order' => 4
-		            ),
-		        )
-		    ),
-		    'Council' => array(
-		        'name' => '协会会员',
-		        'order' => 10,
-		        'menu' => array(
-		            array(
-		                'name' => '会员列表',
-		                'url' => U('Admin/Council/index'),
-		                'order' => 1
-		            ),
-		            array(
-		                'name' => '会员添加',
-		                'url' => U('Admin/Council/add'),
-		                'order' => 2
-		            ),
-		        )
-		     ),
+// 		    'Council' => array(
+// 		        'name' => '协会会员',
+// 		        'order' => 10,
+// 		        'menu' => array(
+// 		            array(
+// 		                'name' => '会员列表',
+// 		                'url' => U('Admin/Council/index'),
+// 		                'order' => 1
+// 		            ),
+// 		            array(
+// 		                'name' => '会员添加',
+// 		                'url' => U('Admin/Council/add'),
+// 		                'order' => 2
+// 		            ),
+// 		        )
+// 		     ),
 
             'system' => array(
                 'name' => '系统',

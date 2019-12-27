@@ -5,39 +5,34 @@ use Admin\Controller\AdminController;
  * 文章列表
  */
 
-class AdminContentController extends AdminController {
+class ActivityController extends AdminController {
     /**
      * 当前模块参数
      */
     protected function _infoModule(){
         return array(
             'info'  => array(
-                'name' => '内容管理',
-                'description' => '管理网站所有内容',
+                'name' => '活动管理',
+                'description' => '管理网站活动',
                 ),
                 'menu' => array(
                     array(
-                        'name' => '协会新闻',
-                        'url' => U('index',array('class_id'=>1)),
+                        'name' => '活动预告',
+                        'url' => U('index',array('class_id'=>11)),
                         'icon' => 'list',
                     ),
                     array(
-                        'name' => '国际新闻',
-                        'url' => U('index',array('class_id'=>2)),
+                        'name' => '活动回顾',
+                        'url' => U('index',array('class_id'=>12)),
                         'icon' => 'list',
                     ),
                     array(
-                        'name' => '国内新闻',
-                        'url' => U('index',array('class_id'=>3)),
+                        'name' => '国际峰会',
+                        'url' => U('index',array('class_id'=>13)),
                         'icon' => 'list',
                     ),
                     array(
-                        'name' => '通知公告',
-                        'url' => U('index',array('class_id'=>4)),
-                        'icon' => 'list',
-                    ),
-                    array(
-                        'name' => '添加动态',
+                        'name' => '添加活动',
                         'url' => U('add'),
                         'icon' => 'plus',
                     ),
@@ -76,6 +71,9 @@ class AdminContentController extends AdminController {
         $limit = $this->getPageLimit($count,20);
         $list = $contentMod->loadList($where,$limit);
 
+        foreach($list as $key=>$val){
+            $list[$key]['content'] = html_out($val['content']);
+        }
         //位置导航
         $breadCrumb = array('文章列表'=>U());
         //模板传值
@@ -93,12 +91,12 @@ class AdminContentController extends AdminController {
      */
     public function add(){
         if(!IS_POST){
-            $breadCrumb = array('新闻添加'=>U());
+            $breadCrumb = array('活动添加'=>U());
             $time=time();
             $this->assign('time',$time);
             $this->assign('breadCrumb',$breadCrumb);
             $this->assign('name','添加');
-            $this->assign('categoryList',D('CategoryArticle')->loadList(['parent_id'=>1]));
+            $this->assign('categoryList',D('CategoryArticle')->loadList(['parent_id'=>2]));
             $this->adminDisplay('info');
         }else{
 
@@ -144,19 +142,19 @@ class AdminContentController extends AdminController {
             $this->assign('breadCrumb',$breadCrumb);
             $this->assign('name','修改');
             $this->assign('info',$info);
-            $this->assign('categoryList',D('CategoryArticle')->loadList(['parent_id'=>1]));
+            $this->assign('categoryList',D('CategoryArticle')->loadList(['parent_id'=>2]));
             $this->adminDisplay('info');
         }else{
             
             if(D('ContentArticle')->saveData('edit')){
                 
                
-                $this->success('文章修改成功！',true);
+                $this->success('修改成功！',true);
                 
             }else{
                 $msg = D('ContentArticle')->getError();
                 if(empty($msg)){
-                    $this->error('文章修改失败');
+                    $this->error('修改失败');
                 }else{
                     $this->error($msg);
                 }
@@ -169,18 +167,15 @@ class AdminContentController extends AdminController {
      * 删除
      */
     public function del(){
-		$adminuid = $_SESSION['admin_user']['user_id'];
-		if( $adminuid!=1)
-			$this->error('您没有权限编辑其他人的文章');
 		
         $contentId = I('post.data',0,'intval');
         if(empty($contentId)){
             $this->error('参数不能为空！');
         }
         if(D('ContentArticle')->delData($contentId)){
-            $this->success('文章删除成功！');
+            $this->success('删除成功！');
         }else{
-            $this->error('文章删除失败！');
+            $this->error('删除失败！');
         }
     }
 
@@ -188,9 +183,7 @@ class AdminContentController extends AdminController {
      * 批量操作
      */
     public function batchAction(){
-        	$adminuid = $_SESSION['admin_user']['user_id'];
-		if( $adminuid!=1)
-			$this->error('您没有权限编辑其他人的文章');
+
         $type = I('post.type',0,'intval');
         $ids = I('post.ids');
         $classId = I('post.class_id',0,'intval');

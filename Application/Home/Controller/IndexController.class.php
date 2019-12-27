@@ -48,6 +48,9 @@ class IndexController extends SiteController {
         //公告
         $noticeList = D('Admin/Notice')->loadList(['state'=>1],10);
         
+        //协会活动
+        $activityList = $contentMod->loadList(['class_id'=>12,'status'=>2],3);
+        
         
         $this->assign('first1',$first1);
         $this->assign('list1',$list1);
@@ -56,6 +59,7 @@ class IndexController extends SiteController {
         $this->assign('first3',$first3);
         $this->assign('list3',$list3);
         $this->assign('noticeList',$noticeList);
+        $this->assign('activityList',$activityList);
         $this -> siteDisplay('index');
     }
     
@@ -73,7 +77,7 @@ class IndexController extends SiteController {
 
         $this->assign('list',$list);
         $this->assign('noticeList',$noticeList);
-        $this->assign('navi_num',3);
+        $this->assign('navi_num',$type);
         $this -> siteDisplay('dynamic');
     }
     
@@ -100,6 +104,7 @@ class IndexController extends SiteController {
 
         $this->assign('contentInfo',$contentInfo);
         $this->assign('noticeList',$noticeList);
+        $this->assign('navi_num',$contentInfo['class_id']);
         $this -> siteDisplay('newsContent');
     }
     
@@ -169,6 +174,7 @@ class IndexController extends SiteController {
 
         $this->assign('list',$list);
         $this->assign('newsList',$newsList);
+        $this->assign('navi_num',$type);
         $this -> siteDisplay('activity');
     }
     //活动详情
@@ -193,6 +199,7 @@ class IndexController extends SiteController {
         
         $this->assign('contentInfo',$contentInfo);
         $this->assign('noticeList',$noticeList);
+        $this->assign('navi_num',$contentInfo['class_id']);
         $this -> siteDisplay('activityContent');
     }
     

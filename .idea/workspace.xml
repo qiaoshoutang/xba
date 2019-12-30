@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7672913a-3434-4b19-8359-3bb92c02cc5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/leader.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/leader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/css/association_dynamics.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/association_dynamics.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/css/index.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,25 +30,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="30" />
-          <entry key="html" value="81" />
+          <entry key="css" value="33" />
+          <entry key="html" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="30" />
-          <entry key="HTML" value="81" />
+          <entry key="CSS" value="33" />
+          <entry key="HTML" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="612" />
+          <entry key="css" value="678" />
           <entry key="html" value="4427" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="612" />
+          <entry key="CSS" value="678" />
           <entry key="HTML" value="4427" />
         </counts>
       </usages-collector>
@@ -56,11 +56,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/default/leader.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/default/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="151" column="36" lean-forward="true" selection-start-line="151" selection-start-column="36" selection-end-line="151" selection-end-column="36" />
+            <state relative-caret-position="1320">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/default/css/association_dynamics.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="178" column="1" lean-forward="true" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/default/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -77,8 +95,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.nav-header ul li</find>
-      <find>topTitle</find>
       <find>Copyright</find>
       <find>bottom-box</find>
       <find>association_dynamics</find>
@@ -107,6 +123,8 @@
       <find>lef</find>
       <find>.HzTitle</find>
       <find>.Association-activities, .Association-leadership</find>
+      <find>.Cont_R_Title</find>
+      <find>.Cont_R_Text</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,7 +147,6 @@
         <option value="$PROJECT_DIR$/themes/default/admissionRequirt.html" />
         <option value="$PROJECT_DIR$/themes/default/Activits.html" />
         <option value="$PROJECT_DIR$/themes/default/dynamic.html" />
-        <option value="$PROJECT_DIR$/themes/default/css/association_dynamics.css" />
         <option value="$PROJECT_DIR$/themes/default/framework.html" />
         <option value="$PROJECT_DIR$/themes/default/constitution.html" />
         <option value="$PROJECT_DIR$/themes/default/contact.html" />
@@ -145,6 +162,8 @@
         <option value="$PROJECT_DIR$/themes/default/memberManage.html" />
         <option value="$PROJECT_DIR$/themes/default/index.html" />
         <option value="$PROJECT_DIR$/themes/default/leader.html" />
+        <option value="$PROJECT_DIR$/themes/default/css/association_dynamics.css" />
+        <option value="$PROJECT_DIR$/themes/default/css/index.css" />
       </list>
     </option>
   </component>
@@ -217,7 +236,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577437007603" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577685745812" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -257,12 +276,12 @@
       <workItem from="1577235224791" duration="2461000" />
       <workItem from="1577321132153" duration="13509000" />
       <workItem from="1577407775465" duration="15321000" />
-      <workItem from="1577667859520" duration="11364000" />
+      <workItem from="1577667859520" duration="12551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129260000" />
+    <option name="totallyTimeSpent" value="130447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="0" width="1936" height="1080" extended-state="0" />
@@ -304,9 +323,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/default/css/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/css/public.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -352,13 +368,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
           <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/css/association_dynamics.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="133" column="17" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -454,13 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="43" column="4" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/memberList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -470,8 +472,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/leader.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="151" column="36" lean-forward="true" selection-start-line="151" selection-start-column="36" selection-end-line="151" selection-end-column="36" />
+        <state relative-caret-position="1470">
+          <caret line="154" column="56" selection-start-line="154" selection-start-column="56" selection-end-line="154" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/css/association_dynamics.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="178" column="1" lean-forward="true" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
         </state>
       </provider>
     </entry>

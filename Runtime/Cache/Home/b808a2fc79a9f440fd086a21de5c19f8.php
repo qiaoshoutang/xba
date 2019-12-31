@@ -11,17 +11,14 @@
     <div class="bottom-text">
         <div class="bottom-text-left">
             <div class="Tt-bottom">友情链接</div>
-            <p style="margin-top: 20px"><a href="">厦门大学区块链研究中心</a><a href="">厦门蚂蚁节点联盟区块链有限公司</a><a href="">厦门安妮股份有限公司</a></p>
-            <p><a href="">厦门蚂蚁节点联盟区块链有限公司</a><a href="">厦门大学区块链研究中心</a><a href="">厦门大学区块链研究中心</a></p>
-            <p><a href="">厦门大学区块链研究中心</a><a href="">厦门蚂蚁节点联盟区块链有限公司</a><a href="">厦门大学区块链研究中心</a></p>
-            <p><a href="">厦门安妮股份有限公司</a><a href="">厦门大学区块链研究中心</a><a href="">厦门安妮股份有限公司</a></p>
+            <p style="margin-top: 20px"><a href="">厦门大学区块链研究中心</a><a href="http://mayi.org/">厦门蚂蚁节点联盟区块链有限公司</a><a href="http://www.anne.com.cn/">厦门安妮股份有限公司</a></p>
         </div>
 
         <div class="bottom-text-right">
             <div class="Tt-bottom">联系我们</div>
             <p style="margin-top: 20px">
                 <img src="images/dianhua.png" alt="">
-                <span>0592-666666</span>
+                <span>0592-6600592</span>
             </p>
             <p>
                 <img src="images/youxiang.png" alt="">
@@ -29,7 +26,7 @@
             </p>
             <p>
                 <img src="images/dizhi.png" alt="">
-                <span>厦门大学区块链研究中心</span>
+                <span>厦门市湖里区枋湖西路189号二层209单元</span>
             </p>
         </div>
 

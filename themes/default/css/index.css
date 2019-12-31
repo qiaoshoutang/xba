@@ -18,7 +18,7 @@
     min-height: 277px;
     background: white;
     margin: 25px auto 0 auto;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 .Title-Association-Brief{
     width: 100%;
@@ -31,7 +31,7 @@
 .Content-introduction{
     margin: 50px auto 0 auto;
     width: 90%;
-    color:#818181 ;
+    color:#1a1a1a ;
     font-size: 20px;
     line-height: 150%;
     letter-spacing: 1px;
@@ -124,7 +124,7 @@
     font-size: 16px;
     line-height: 180%;
     text-align: justify;
-    color: #8b8b8b;
+    color: #1a1a1a;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -147,7 +147,7 @@
     padding-top: 20px;
 }
 .association-div a{
-    color: #8b8b8b;
+    color: #1a1a1a;
     line-height: 180%;
     text-decoration: none;
     width: 50%;
@@ -204,7 +204,7 @@
     overflow-y: auto;
 }
 .box-right-Text ul li a{
-    color: #8b8b8b;
+    color: #1a1a1a;
     text-decoration: none;
 }
 .box-right-Text ul li a:hover{
@@ -285,7 +285,7 @@
 }
 .Ass-Ac-text-small,.Ass-lea-small{
     font-size: 13px;
-    color: #8b8b8b;
+    color: #1a1a1a;
     width: 70%;
     margin: 5px auto;
     line-height: 150%;

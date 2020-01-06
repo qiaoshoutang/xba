@@ -53,7 +53,7 @@
     width: 85%;
     margin: 0 auto;
     text-align: left;
-    font-size:19px;
+    font-size:16.5px;
     line-height: 180%;
 }
 .Detail_p{
@@ -116,6 +116,7 @@
     height: 100px;
     border: 1px solid #ddd;
     font-family: 'Microsoft Yahei';
+    text-indent: 10px;
 }
 #btn_submit{
     margin-left: 320px;

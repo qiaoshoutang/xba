@@ -53,8 +53,8 @@
 .titile-association{
     width: 100%;
     height: 50px;
-    border-top: 1px silver solid;
-    border-bottom: 1px silver solid;
+    border-top: 1px #f0f0f0 solid;
+    border-bottom: 1px #f0f0f0 solid;
     background:#f8f8f8 ;
 }
 .titile-association ul {
@@ -73,8 +73,8 @@
 .addCssList{
     color: #5a8bff;
     border-top:2px solid  #5a8bff;
-    border-right: 1px solid silver;
-    border-left: 1px solid silver;
+    border-right: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0;
     border-bottom: none!important;
     background: white;
     height: 49px!important;
@@ -95,6 +95,7 @@
     height: 225px;
     background: white;
     position: relative;
+    cursor: pointer;
 }
 .content-association-img{
     width: 35%;
@@ -140,7 +141,7 @@
 .content-association-bottom-content{
     width: 95%;
     margin: 0 auto;
-    border-top: 1px silver solid;
+    border-top: 1px #f0f0f0 solid;
 }
 .association-div{
     width: 100%;
@@ -151,12 +152,13 @@
     color: #1a1a1a;
     line-height: 180%;
     text-decoration: none;
-    width: 50%;
+    width: 48%;
     display: inline-block;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     float: left;
+    margin-right: 2%;
 }
 .click-switch{
     display: none;
@@ -238,6 +240,7 @@
     font-size:25px ;
     font-weight: bold;
     position: absolute;
+    top: 10px;
     left: 0;
 }
 .MoreAndM{
@@ -263,7 +266,7 @@
 }
 .Ass-lea-text ul li{
     width:200px;
-    height: 214px;
+    height: 250px;
     float: left;
     text-align: center;
     margin-top: 25px;
@@ -287,15 +290,22 @@
 .Ass-Ac-text-small,.Ass-lea-small{
     font-size: 13px;
     color: #1a1a1a;
-    width: 70%;
+    width: 85%;
     margin: 5px auto;
     line-height: 150%;
+}
+.Ass-Ac-text-small{
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
 }
 .Tx-Lea{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: yellow;
+    overflow: hidden;
     margin: 0 auto;
 }
 /*会员单位、合作伙伴*/

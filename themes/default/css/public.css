@@ -30,7 +30,7 @@ ul li{
     margin-left: 65px;
 }
 .nav-header{
-    width: 50%;
+    width: 45%;
     height: 100%;
     position: absolute;
     right: 20px;
@@ -104,4 +104,17 @@ ul li{
 .bottom-text-right p img{
    position: relative;
     top:2px ;
+}
+.NoticeContent img{
+    max-width: 100%;
+}
+.NoticeContent p{
+    margin-top:10px!important;
+    text-indent: 2em;
+}
+.rightCon{
+    padding-bottom: 50px;
+}
+.noticeTextTitleBox{
+    border-bottom: 1px #aaaaaa solid!important;
 }

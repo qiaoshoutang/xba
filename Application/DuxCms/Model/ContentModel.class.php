@@ -155,21 +155,7 @@ class ContentModel extends Model {
         if(!$status){
             return false;
         }
-        //获取字段集信息
-        $fieldsetInfo = D('DuxCms/Fieldset')->getInfoClassId($info['class_id']);
-        //删除扩展字段
-        if(!empty($fieldsetInfo)){
-            $expandModel = D('DuxCms/FieldData');
-            $expandModel->setTable($fieldsetInfo['table']);
-            if($expandModel->getInfo($contentId)){
-                if(!$expandModel->delData($contentId)){
-                    $this->error = $expandModel->getError();
-                    return false;
-                }
-            }
-        }
-        //删除TAG关联
-        D('DuxCms/TagsHas')->delData($map);
+
         return $status;
     }
 

@@ -169,9 +169,6 @@ class AdminContentController extends AdminController {
      * 删除
      */
     public function del(){
-		$adminuid = $_SESSION['admin_user']['user_id'];
-		if( $adminuid!=1)
-			$this->error('您没有权限编辑其他人的文章');
 		
         $contentId = I('post.data',0,'intval');
         if(empty($contentId)){

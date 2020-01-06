@@ -16,6 +16,7 @@ return array(
 	    'xbaabout/3'   =>'Home/Index/leader',        //协会领导
 	    'xbaabout/4'   =>'Home/Index/framework',     //协会框架
 	    'xbaabout/5'   =>'Home/Index/contact',       //联系我们
+	    'xbaabout/6'   =>'Home/Index/thinkTank',       //协会智库
 	    'xbaactivity/:type'=>'Home/Index/activity',  //协会活动
 	    'activityContent/:content_id' =>'Home/Index/activityContent', //活动详情
 	    'xbamemberlist'   =>'Home/Index/memberList', //会员动态

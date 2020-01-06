@@ -47,10 +47,10 @@ class IndexController extends SiteController {
         $first3 = array_shift($list3);
 
         //公告
-        $noticeList = D('Admin/Notice')->loadList(['state'=>1],10);
+        $noticeList = $contentMod->loadList(['class_id'=>4,'status'=>2],10);;
         
         //协会活动
-        $activityList = $contentMod->loadList(['class_id'=>12,'status'=>2],3);
+        $activityList = $contentMod->loadList(['class_id'=>['in',[11,12]],'status'=>2],3);
         
         
         $this->assign('first1',$first1);
@@ -157,6 +157,17 @@ class IndexController extends SiteController {
         
         $this->assign('noticeList',$noticeList);
         $this -> siteDisplay('contact');
+    }
+    //协会智库
+    public function thinkTank(){
+
+        //公告
+        $contentMod = D('Admin/Content');
+        $noticeList = $contentMod->loadList(['status'=>2,'class_id'=>4],10,'time desc');
+        
+        $this->assign('noticeList',$noticeList);
+
+        $this -> siteDisplay('think');
     }
     
     //协会活动

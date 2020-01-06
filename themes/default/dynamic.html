@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>厦门区块链协会</title>
-    <link rel="stylesheet" href="css/association_dynamics.css">
+    <link rel="stylesheet" href="css/association_dynamics.css?12">
     <link rel="stylesheet" href="css/public.css">
 </head>
 <style>
@@ -24,7 +24,7 @@
         <div class="nav_small">
 
             <img src="images/location.png" alt="" class="locationAA">
-            <a href="">首页</a>><a href="">协会动态</a>><a href="">协会新闻</a>
+            <a href="/">首页</a>><a href="">协会动态</a>><a href="">协会新闻</a>
         </div>
         <!--主要内容-->
         <div class="Ass_content">
@@ -44,7 +44,10 @@
                 </div>
                 <div class="Title_Ass AssGg">
                     <div class="topTitle_Gg">
-                        <div class="topTitle_Ggg">通知公告</div>
+                        <div class="topTitle_Ggg">
+                            <span class="TitleBlue"></span>
+                            通知公告
+                        </div>
                         <div class="moreAnd" onclick='window.location.href="/xbadynamic/4"'>
                             更多
                         </div>

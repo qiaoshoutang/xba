@@ -25,22 +25,22 @@ ul li{
     left: 0;
 }
 .nav-header-logo img{
-    width: 385px;
+    width: 360px;
     margin-top: 15px;
-    margin-left: 55px;
+    margin-left: 65px;
 }
 .nav-header{
-    width: 50%;
+    width: 45%;
     height: 100%;
     position: absolute;
-    right: 50px;
+    right: 20px;
 }
 .nav-header ul{
     width: 100%;
     height: 100%;
 }
 .nav-header ul li{
-    width: 14.25%;
+    width: 16.66%;
     height: 130px;
     line-height: 130px;
     text-align: center;
@@ -104,4 +104,17 @@ ul li{
 .bottom-text-right p img{
    position: relative;
     top:2px ;
+}
+.NoticeContent img{
+    max-width: 100%;
+}
+.NoticeContent p{
+    margin-top:10px!important;
+    text-indent: 2em;
+}
+.rightCon{
+    padding-bottom: 50px;
+}
+.noticeTextTitleBox{
+    border-bottom: 1px #aaaaaa solid!important;
 }

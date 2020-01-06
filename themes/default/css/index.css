@@ -18,7 +18,7 @@
     min-height: 277px;
     background: white;
     margin: 25px auto 0 auto;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
 }
 .Title-Association-Brief{
     width: 100%;
@@ -29,12 +29,13 @@
     letter-spacing: 2px;
 }
 .Content-introduction{
-    margin: 50px auto 0 auto;
+    margin: 25px auto 0 auto;
     width: 90%;
     color:#1a1a1a ;
     font-size: 20px;
     line-height: 150%;
     letter-spacing: 1px;
+    text-indent: 2em;
 }
 /*<!--协会新闻、国际咨询，国内要闻，通知公告-->*/
 .association-box{
@@ -52,8 +53,8 @@
 .titile-association{
     width: 100%;
     height: 50px;
-    border-top: 1px silver solid;
-    border-bottom: 1px silver solid;
+    border-top: 1px #f0f0f0 solid;
+    border-bottom: 1px #f0f0f0 solid;
     background:#f8f8f8 ;
 }
 .titile-association ul {
@@ -66,14 +67,14 @@
     text-align: center;
     line-height: 50px;
     height: 50px;
-    font-size: 19px;
+    font-size: 23px;
     font-weight: bold;
 }
 .addCssList{
     color: #5a8bff;
     border-top:2px solid  #5a8bff;
-    border-right: 1px solid silver;
-    border-left: 1px solid silver;
+    border-right: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0;
     border-bottom: none!important;
     background: white;
     height: 49px!important;
@@ -94,6 +95,7 @@
     height: 225px;
     background: white;
     position: relative;
+    cursor: pointer;
 }
 .content-association-img{
     width: 35%;
@@ -139,7 +141,7 @@
 .content-association-bottom-content{
     width: 95%;
     margin: 0 auto;
-    border-top: 1px silver solid;
+    border-top: 1px #f0f0f0 solid;
 }
 .association-div{
     width: 100%;
@@ -150,12 +152,13 @@
     color: #1a1a1a;
     line-height: 180%;
     text-decoration: none;
-    width: 50%;
+    width: 48%;
     display: inline-block;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     float: left;
+    margin-right: 2%;
 }
 .click-switch{
     display: none;
@@ -212,10 +215,10 @@
     text-decoration: underline;
     color: #5a8bff;
 }
-/* 设置滚动条的样式 */::-webkit-scrollbar { width: 3px;height: 5px}
+/* 设置滚动条的样式 */::-webkit-scrollbar { width: 2px;height:1px;}
 /* 滚动槽 */::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); border-radius: 10px;}
-/* 滚动条滑块 */::-webkit-scrollbar-thumb { border-radius: 10px; background: rgba(0,0,0,0.1);
-               -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);}
+/* 滚动条滑块 */::-webkit-scrollbar-thumb { border-radius: 10px; background: rgba(0,0,0,0.1);height: 5px;
+               -webkit-box-shadow: inset 0 0 6px rgba(90,139,255,0.5);}
 ::-webkit-scrollbar-thumb:window-inactive { background: rgba(0,0,0,0.1);}
 /*协会活动*/
 .Association-activities,.Association-leadership{
@@ -237,6 +240,7 @@
     font-size:25px ;
     font-weight: bold;
     position: absolute;
+    top: 10px;
     left: 0;
 }
 .MoreAndM{
@@ -262,7 +266,7 @@
 }
 .Ass-lea-text ul li{
     width:200px;
-    height: 214px;
+    height: 250px;
     float: left;
     text-align: center;
     margin-top: 25px;
@@ -286,15 +290,22 @@
 .Ass-Ac-text-small,.Ass-lea-small{
     font-size: 13px;
     color: #1a1a1a;
-    width: 70%;
+    width: 85%;
     margin: 5px auto;
     line-height: 150%;
+}
+.Ass-Ac-text-small{
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
 }
 .Tx-Lea{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: yellow;
+    overflow: hidden;
     margin: 0 auto;
 }
 /*会员单位、合作伙伴*/

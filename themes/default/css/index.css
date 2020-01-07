@@ -277,6 +277,14 @@
 .Ass-Ac-text-big,.Ass-lea-big{
     font-size: 18px;
     margin-top: 5px;
+
+}
+.Ass-Ac-text-big{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 85%;
+    margin: 0 auto;
 }
 .Ass-lea-big{
     padding-top: 5px;

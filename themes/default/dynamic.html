@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="css/public.css">
 </head>
 <style>
-    .Title_Ass{
-    }
 </style>
 <body>
 <div class="box">

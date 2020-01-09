@@ -22,7 +22,7 @@
             </p>
             <p>
                 <img src="images/youxiang.png" alt="">
-                <span>xiamenqukuailian@xba.org</span>
+                <span>1017919155@qq.com</span>
             </p>
             <p>
                 <img src="images/dizhi.png" alt="">

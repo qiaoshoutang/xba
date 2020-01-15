@@ -34,13 +34,12 @@
         max-width: 640px;
         min-width: 320px;
         margin: 0 auto;
+        position: relative;
     }
     .btn_box{
         margin: 0 auto;
         width: 100%;
         text-align: center;
-
-
     }
     .btn{
         background: #01AAED;
@@ -51,26 +50,31 @@
         border-radius: 4px;
         font-size: .3rem;
     }
-    .ifranmea{
-        opacity: 0;
+    .appltTable{
+       position: absolute;
+        top: 5.5rem;
+        text-align: center;
+        width: 100%;
+    }
+    .appltTable img{
+        width: 40%;
+    }
+    a{
+        text-decoration: none;
+        color: white;
     }
 </style>
 <body>
 <div class="box">
-    <img src="images/liuchengbiao.png" alt="" width="100%">
-    <div class="btn_box">
-        <button class="btn">
-            入会申请表(下载)
-        </button>
+    <img src="images/liuchengbiao.jpg" alt="" width="100%">
+    <div class="appltTable">
+        <a href="/themes/default/doc/applytable.xlsx" download='厦门市区块链协会申请表'>
+            <img src="images/applybtn.png" alt="" >
+        </a>
     </div>
-
 </div>
 
 </body>
 </html>
 <script src="js/jquery.js"></script>
-<script>
-    $(".btn").click(function () {
-        $(".box").append("<iframe src='/themes/default/doc/shenqingbiao.xlsx' class='ifranmea'></iframe>")
-    })
-</script>
+

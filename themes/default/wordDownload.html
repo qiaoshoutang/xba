@@ -39,8 +39,6 @@
         margin: 0 auto;
         width: 100%;
         text-align: center;
-
-
     }
     .btn{
         background: #01AAED;
@@ -52,25 +50,26 @@
         font-size: .3rem;
     }
     .ifranmea{
-        opacity: 0;
+       display: none;
+    }
+    a{
+        text-decoration: none;
+        color: white;
     }
 </style>
 <body>
 <div class="box">
-    <img src="images/liuchengbiao.png" alt="" width="100%">
-    <div class="btn_box">
-        <button class="btn">
-            入会申请表(下载)
-        </button>
-    </div>
+    <img src="images/liuchengbiao.jpg" alt="" width="100%">
+    <div class="appltTable">
 
+    </div>
 </div>
 
 </body>
 </html>
 <script src="js/jquery.js"></script>
-<script>
-    $(".btn").click(function () {
-        $(".box").append("<iframe src=\"doc/shenqingbiao.xlsx\" class='ifranmea'></iframe>")
-    })
-</script>
+<!--<script>-->
+    <!--// $(".btn").click(function () {-->
+    <!--//     $(".box").append("<iframe src=\"doc/shenqingbiao.xlsx\" class='ifranmea'></iframe>")-->
+    <!--// })-->
+<!--</script>-->

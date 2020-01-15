@@ -5,64 +5,14 @@ use Home\Controller\SiteController;
  * 站点首页
  */
 
-class IndexController extends SiteController {
+class OtherController extends SiteController {
     
     
-    public function __construct() {
 
-        parent::__construct ();
-        header("Content-Type:text/html; charset=utf-8");
-//         $this->siteDisplay('building');
-//         exit;
-//         $detect = new \Common\Util\Mobile_Detect();
-//         $ishttps = 0;
+    //入会申请表下载
+    public function downTable(){
 
-//         if($_SERVER['REQUEST_SCHEME']=='https'){
-//             $ishttps=1;
-//         }
-            
-//         if ($detect->isMobile()){    
-//             if($ishttps){
-//                 redirect('https://'.$_SERVER['HTTP_HOST'].'/home_m');
-//             }else{
-//                 redirect('http://'.$_SERVER['HTTP_HOST'].'/home_m');
-//             }
-//         } 
-    }
-
-    //首页
-    public function index(){
-
-        $contentMod = D('Admin/Content');
-        
-        //协会新闻
-        $list1 = $contentMod->loadList(['class_id'=>1,'status'=>2],7);
-        $first1 = array_shift($list1);
-        
-        //国际新闻
-        $list2 = $contentMod->loadList(['class_id'=>2,'status'=>2],7);
-        $first2 = array_shift($list2);
-        
-        //国内新闻
-        $list3 = $contentMod->loadList(['class_id'=>3,'status'=>2],7);
-        $first3 = array_shift($list3);
-
-        //公告
-        $noticeList = $contentMod->loadList(['class_id'=>4,'status'=>2],10);;
-        
-        //协会活动
-        $activityList = $contentMod->loadList(['class_id'=>['in',[11,12]],'status'=>2],3);
-        
-        
-        $this->assign('first1',$first1);
-        $this->assign('list1',$list1);
-        $this->assign('first2',$first2);
-        $this->assign('list2',$list2);
-        $this->assign('first3',$first3);
-        $this->assign('list3',$list3);
-        $this->assign('noticeList',$noticeList);
-        $this->assign('activityList',$activityList);
-        $this->siteDisplay('index');
+        $this->siteDisplay('wordDownload');
     }
     
     //协会动态

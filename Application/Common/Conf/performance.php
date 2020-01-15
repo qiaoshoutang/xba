@@ -30,6 +30,9 @@ return array(
 	    'applytable'     =>'Home/Index/applyTable', //入会申请
 	    
 	    
+	    'wordDnowload'     =>'Home/Other/downTable', //入会表单下载
+	    
+	    
 	    
 	    'home_m'          =>  'Home/Mobile/index',
 	    'memo_m'          =>  'Home/Mobile/memo',

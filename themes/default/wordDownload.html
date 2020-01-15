@@ -54,13 +54,17 @@
     .ifranmea{
         opacity: 0;
     }
+    a{
+        text-decoration: none;
+        color: white;
+    }
 </style>
 <body>
 <div class="box">
     <img src="images/liuchengbiao.png" alt="" width="100%">
     <div class="btn_box">
         <button class="btn">
-            入会申请表(下载)
+            <a href='/themes/default/doc/applytable.xlsx' download="applytable.xlsx">入会申请表(下载)</a>
         </button>
     </div>
 
@@ -69,8 +73,3 @@
 </body>
 </html>
 <script src="js/jquery.js"></script>
-<script>
-    $(".btn").click(function () {
-        $(".box").append("<iframe src='/themes/default/doc/shenqingbiao.xlsx' class='ifranmea'></iframe>")
-    })
-</script>

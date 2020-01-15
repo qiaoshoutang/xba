@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>厦门市区块链协会</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .box{
+        width: 100%;
+        max-width: 640px;
+        min-width: 320px;
+        margin: 0 auto;
+    }
+    .btn_box{
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+
+
+    }
+    .btn{
+        background: #01AAED;
+        border: none;
+        height: 1rem;
+        line-height: 1rem;
+        color: white;
+        border-radius: 4px;
+        font-size: .3rem;
+    }
+    .ifranmea{
+        opacity: 0;
+    }
+</style>
+<body>
+<div class="box">
+    <img src="images/liuchengbiao.png" alt="" width="100%">
+    <div class="btn_box">
+        <button class="btn">
+            入会申请表(下载)
+        </button>
+    </div>
+
+</div>
+
+</body>
+</html>
+<script src="js/jquery.js"></script>
+<script>
+    $(".btn").click(function () {
+        $(".box").append("<iframe src=\"doc/shenqingbiao.xlsx\" class='ifranmea'></iframe>")
+    })
+</script>

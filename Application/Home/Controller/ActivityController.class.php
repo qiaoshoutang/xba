@@ -11,7 +11,16 @@ class ActivityController extends SiteController {
         echo $_SERVER['HTTP_HOST'];
         
     }
-    
+    //2020年厦门市区块链企业年终评选首页
+    public function selection(){  
+        C('TPL_NAME','mobile');
+        $this -> siteDisplay('selection');
+    }
+    //2020年厦门市区块链企业年终评选规则也
+    public function selection_rule(){  
+        C('TPL_NAME','mobile');
+        $this -> siteDisplay('rule');
+    }
     
     public function index(){
 //         $act_id=90;

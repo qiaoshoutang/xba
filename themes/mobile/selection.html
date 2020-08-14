@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>区块链企业评选</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="box">
+        <!--规则按钮-->
+        <div class="rulePage">
+            <a href="/xba_selection_rule.html">
+                <img src="images/rulePage.png" alt="" width="100%">
+            </a>
+        </div>
+        <div class="title">
+            <img src="images/Title.png" alt="">
+            <span class="RegistrationTime">报名时间:2020年8月20日-30日</span>
+        </div>
+        <div class="ContentBox">
+            2020年9月9日，在全国工商联并购公会、厦门市工商联、厦门市科技局、厦门市商务局等部门的联合指导下，由全联并购公会区块链专委会及厦门市区块链协会共同主办的《2020年厦门国际投资贸易洽谈会——首届区块链论坛暨“区块链+产业”应用峰会》将在厦门国际会展中心B2馆鹭江厅盛大举行。为了深入的交流探讨，更好的发掘优秀厦门市区块链企业，会议将设置“2020年厦门市优秀区块链企业年中表彰仪式”，表彰2020年上半年获得优秀研发及运营成果的厦门区块链企业及个人。
+        </div>
+        
+        <div class="btnBox">
+            <img src="images/btnBox.png" alt="" width="100%">
+        </div>
+
+        <div class="bottomFont">
+            <p>主办方 : 厦门市区块链协会</p>
+            <p>评选时间：2020年8月25日-31日</p>
+            <p>复审时间：2020年9月1日-3日</p>
+            <p>颁奖时间：2020年9月9日</p>
+        </div>
+
+
+    </div>
+</body>
+</html>
+<script src="js/jquery.js"></script>
+<script>
+    //判断设备是android还是ios
+    var u = navigator.userAgent, app = navigator.appVersion;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if(isiOS){
+        $(".box").css({
+            "height":"115vh"
+        })
+    }
+</script>

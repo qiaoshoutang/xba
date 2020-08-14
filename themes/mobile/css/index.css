@@ -1,0 +1,70 @@
+.box{
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    background:url("../images/backgroundbox.jpg")no-repeat center top ;
+    background-size: 100% 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.rulePage{
+    position: absolute;
+    right: 0;
+    top: 3.5rem;
+    width: 18%;
+}
+.rulePage img{
+    width: 100%;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.title{
+    width: 80%;
+    margin: .5rem auto;
+}
+.title img{
+    width: 100%;
+}
+.RegistrationTime{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: .25rem;
+    display: inline-block;
+    letter-spacing: 1px;
+    position:relative ;
+    top: -.65rem;
+}
+.ContentBox{
+    width: 80%;
+    margin: 0 auto;
+    font-size: .18rem;
+    color: white;
+    line-height: 190%;
+    text-align: justify;
+    text-indent: 2em
+}
+.btnBox{
+    width: 40%;
+    margin: .2rem auto;
+}
+.bottomFont{
+    width: 100%;
+    text-align: center;
+    font-size: .23rem;
+    color: white;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: .5rem;
+}
+.bottomFont p{
+    margin-top: .1rem;
+}
+@media only screen and (device-width: 375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3){
+    .box{
+        height: 100vh!important;
+    }
+}

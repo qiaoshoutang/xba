@@ -45,6 +45,11 @@ return array(
 	    'councils_m'      =>  'Home/Mobile/council',
 	    'recruit_m'       =>  'Home/Mobile/recruit',
 	    
+	    //活动 
+	    'xba_selection'       =>  'Home/Activity/selection',
+	    'xba_selection_rule'       =>  'Home/Activity/selection_rule',
+	    
+	    
 	    'test_m'          =>  'Home/Mobile/council_2',
 
 	),

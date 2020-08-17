@@ -12,8 +12,8 @@ class IndexController extends SiteController {
 
         parent::__construct ();
         header("Content-Type:text/html; charset=utf-8");
-//         $this->siteDisplay('building');
-//         exit;
+        $this->siteDisplay('building');
+        exit;
 //         $detect = new \Common\Util\Mobile_Detect();
 //         $ishttps = 0;
 

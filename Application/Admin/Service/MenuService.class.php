@@ -39,6 +39,22 @@ class MenuService{
 // 		            ),
 // 		        )
 // 		     ),
+		    'Selection' => array(
+    		    'name' => '年中评选',
+		        'order' => 12,
+		        'menu' => array(
+    		            array(
+        		            'name' => '评选列表',
+    		                'url' => U('Admin/Selection/index'),
+    		                'order' => 1
+    		            ),
+		            array(
+    		                'name' => '参选添加',
+    		                'url' => U('Admin/Selection/add'),
+    		                'order' => 2
+    		            ),
+    		        )
+		     ),
 
             'system' => array(
                 'name' => '系统',

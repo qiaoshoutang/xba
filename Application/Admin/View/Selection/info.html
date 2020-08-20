@@ -1,0 +1,39 @@
+<h3>{$name}评选</h3>
+<admin:panel >
+  <admin:form url="{:U()}" method="post" id="form"  class="m-form-horizontal" >
+
+    <admin:formrow title="类型" tip=""  >
+      <admin:radio name="type"  item="企业,项目,个人" value="1,2,3" checked="$info['type']" isset="1" />
+    </admin:formrow>  
+    <admin:formrow title="名称" tip="参评的名称"  >
+      <admin:text name="name"  value="{$info.name}" len="100"/>
+    </admin:formrow>
+    <admin:formrow title="票数" tip="得票数"  >
+      <admin:text name="votes"  value="{$info.votes}" len="100"/>
+    </admin:formrow>
+
+    <admin:formrow title="头像" tip=""  >
+      <admin:text name="image" type="text" value="{$info.image}" len="250" width="medium" />
+      <a class="u-btn u-btn-primary u-img-upload" data="image" preview="image-preview" href="javascript:;" >上传</a>
+      <a class="u-btn u-btn-primary" href="javascript:;" id="image-preview">预览</a>
+    </admin:formrow>
+
+	  <admin:formrow title="状态" tip=""  >
+      <admin:radio name="status"  item="显示,隐藏" value="1,2" checked="$info['status']" isset="1" />
+    </admin:formrow>     
+
+    <admin:formsubmit/>
+    <admin:text name="id" type="hidden"  value="{$info.id}"  />
+  </admin:form>
+</admin:panel>
+<script>
+Do.ready('base',function(){
+
+  var option={};
+  option.returnUrl="{:U('Admin/Selection/index')}";
+  $('#form').duxFormPage(option);
+
+});
+
+</script> 
+

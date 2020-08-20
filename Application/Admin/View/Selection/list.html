@@ -1,0 +1,46 @@
+<h3>评选列表</h3>
+<admin:panel >
+<admin:tabletool filter="true" keyword="{$pageMaps['keyword']}">
+  <admin:select name="type" item="==类型==,企业,项目,个人" value="0,1,2,3" selected="$pageMaps['type']" /> 
+  <admin:select name="status" item="==状态==,显示,隐藏" value="0,1,2" selected="$pageMaps['status']" /> 
+</admin:tabletool>
+
+<admin:table id="table" show="选择,编号|80,类型,名称,头像,票数,时间,状态,操作|130">
+  <foreach name="list" item="vo">
+    <tr>
+  	  <td>
+  		  <input type="checkbox" name="id[]" value="{$vo.id}" />
+  	  </td>
+      <td>{$vo.id}</td>
+      <td>{$typeArr[$vo['type']]}</td> 
+      <td>{$vo.name}</td>
+      <td><img src="{$vo.image}" style='width:150px'></td>
+      <td>{$vo.votes}</td>
+      <td>{$vo.time|date="Y-m-d H:i:s", ###}</td>
+      <td>{$statusArr[$vo['status']]}</td> 
+      <td>
+        <a class="u-btn u-btn-primary u-btn-small" href="{:U('edit',array('id'=>$vo['id']))}">修改</a> 
+      	<a class="u-btn u-btn-danger u-btn-small del" href="javascript:;" data="{$vo.id}">删除</a>
+      </td>
+    </tr>
+  </foreach>
+</admin:table>
+<admin:tablefoot action="true" item="删除" value="1"/>
+</admin:panel>
+
+
+<script>
+
+Do.ready('base',function(){
+
+	$('#table').duxTable({
+		actionUrl: "{:U('batchAction')}",
+			deleteUrl: "{:U('del')}",
+			actionParameter: function(){
+				return {
+					'class_id': $('#selectAction').next('#class_id').val()
+				};
+			}
+	});
+});
+</script>

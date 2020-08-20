@@ -1,4 +1,13 @@
 <?php
+function dd($parm1,$parm2){
+    if($parm1){
+        dump($parm1);
+    }
+    if($parm2){
+        dump($parm2);
+    }
+    exit;
+}
 /**
  * 获取所有模块Service
  * @param string $name 指定Service名

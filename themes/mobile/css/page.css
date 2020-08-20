@@ -1,0 +1,299 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.box{
+    background: url("../images/backgroundTop.png")top center no-repeat;
+    background-color:#193073 ;
+    background-size:100% auto;
+    min-width: 320px;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+ul li{
+    list-style: none;
+}
+.logoTop{
+    width: 85%;
+    margin: 0.5rem auto;
+    text-align: center;
+    font-size: .2rem;
+    color: white;
+}
+.logoTop img{
+    width: 100%;
+}
+.SelectionTime{
+    margin-top: .2rem;
+}
+
+.CountDown{
+    width:55%;
+    margin:0.1rem auto 0 auto;
+    text-align: center;
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 1rem;
+    padding-bottom: .2rem;
+}
+.CountDown_box{
+    width: 100%;
+    height: .4rem;
+    font-size: 0;
+    line-height: .5rem;
+}
+.CountDown_box img{
+    width: 4%;
+    position: relative;
+    top: .143rem;
+}
+.Count_font{
+    font-size: .23rem;
+    margin-left: .05rem;
+    position: relative;
+    top: .13rem;
+    color: black;
+    /*font-weight: 550;*/
+
+}
+.CountTime{
+    width: 100%;
+    text-align: center;
+    font-size: .3rem;
+    color: #000000;
+    height: .3rem;
+    position: relative;
+    top: .18rem;
+}
+.Recommend{
+    width: 2rem;
+    height: .45rem;
+    background:black;
+    margin: 0.2rem auto;
+    border-radius: 8px;
+    text-align: center;
+    font-size: .25rem;
+    line-height: .45rem;
+    color: white;
+    letter-spacing: 2px;
+    position: relative;
+    top: .22rem;
+}
+
+.Cumulative_selection{
+    width: 100%;
+    margin-top: .5rem;
+    position: relative;
+    height: .7rem;
+    background: url("../images/Bg_opacity.png")center top;
+    background-size: 100% 100%;
+}
+
+.selection-ul{
+    width: 95%;
+    margin: 0 auto;
+}
+.selection-ul li{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+.list-title{
+    font-size: .18rem;
+    color: white;
+    margin-top: .05rem
+}
+.list-number{
+    font-size: .25rem;
+    font-weight: bold;
+    color: #ffd800;
+    margin-top: .05rem;
+}
+.voteRule{
+    width: 100%;
+    text-align: center;
+    font-size: .18rem;
+    color: white;
+    margin: .2rem auto 0 auto;
+    letter-spacing: .5px;
+}
+.advancedEnterprises{
+    width: 100%;
+    margin-top: -.3rem;
+}
+.advancedImg{
+    width: 100%;
+}
+.advancedul{
+    width: 100%;
+    display: inline-block;
+}
+.advancedul li{
+    width: 43%;
+    float: left;
+    margin-left: 5%;
+    height: 4rem;
+    background: rgba(255,255,255,.4);
+    border-radius: 8px;
+    position: relative;
+}
+.King_phone{
+    width: 2.2rem;
+    height: 2.2rem;
+    background: white;
+    margin: 0.2rem auto 0 auto;
+}
+.King_phone img{
+    width: 100%;
+    height: 100%;
+}
+
+.BigShot{
+    width: 80%;
+    margin: 0.2rem auto;
+    font-size: .18rem;
+}
+.BigShot-title{
+    width: 100%;
+    text-align: center;
+    line-height: .25rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: #ffd800;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.BigShot_p{
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-top: .05rem;
+    font-weight: bold;
+}
+.Vote-for-himH{
+    width: 2.25rem;
+    position: absolute;
+    bottom: 0;
+    margin: 0.15rem auto;
+    height: .4rem;
+    text-align: center;
+    border:none;
+    background: #6c6c6c;
+    color: white;
+    font-size: .2rem;
+    line-height: .42rem;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    z-index: 99;
+
+}
+.Vote-for-himY{
+    width: 2.25rem;
+    height: .4rem;
+    text-align: center;
+    border: 1px solid #000000;
+    background: #ffd800;
+    color: #000000;
+    font-size: .23rem;
+    line-height: .42rem;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0.15rem;
+    box-sizing: border-box;
+    z-index: 99;
+}
+.morebtn{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: .23rem;
+    position: relative;
+    z-index: 99;
+}
+.bottomBg{
+    width: 100%;
+}
+.bottomBg img{
+    width: 100%;
+    margin-top: -2.5rem;
+}
+
+.SuccessfulVoting{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    background: rgba(0,0,0,.4);
+    z-index: 99;
+    display: none;
+}
+.Tc_Voting{
+    width: 65%;
+    height: 2.5rem;
+    border: 2.5px solid #193073;
+    background: white;
+    margin:4.5rem auto 0 auto;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+}
+.close{
+    position: absolute;
+    top: -.1rem;
+    right: 0.05rem;
+    font-size: .5rem;
+    font-weight: 200;
+}
+.VotingImg{
+    width: 23%;
+    margin-top: .3rem;
+}
+.Voting-fize{
+    font-size: .25rem;
+    font-weight: bold;
+}
+.Voting-top{
+    position: relative;
+    top: -.1rem;
+}
+.signup{
+    position: absolute;
+    right: 0;
+    top: 13%;
+    width: 1rem;
+    height: .5rem;
+    display: inline-block;
+}
+.ActivitsRules{
+    position: absolute;
+    right: 0;
+    top: 16%;
+    width: 1rem;
+    height: .5rem;
+    display: inline-block;
+}
+.signup img,.ActivitsRules img{
+    position: absolute;
+    top: 0;
+}
+.signup a,.ActivitsRules a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+

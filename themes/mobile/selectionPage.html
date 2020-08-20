@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>厦门区块链年中评选活动</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/page.css">
+
+</head>
+<body>
+    <div class="box">
+        <div class="signup">
+            <a href="http://baidu.com">
+                <img src="images/signup.png" alt="" width="100%">
+            </a>
+        </div>
+
+        <div class="ActivitsRules">
+            <a href="/xba_selection_rule.html">
+                <img src="images/ActivitsRules.png" alt="" width="100%">
+            </a>
+        </div>
+
+        <!--投票成功弹窗-->
+        <div class="SuccessfulVoting">
+            <div class="Tc_Voting">
+                <div class="close" id="close">
+                    ×
+                </div>
+                <img src="images/Votong.png" alt="" class="VotingImg">
+                <div class="Voting-fize Voting-top">投票成功</div>
+                <div class="Voting-fize" id="Voting-fize">今日剩余票数:<span style="color: #193073">{$userInfo.selection_num}</span></div>
+            </div>
+        </div>
+
+        <div class="logoTop">
+            <img src="images/logoTop.png" alt="">
+            <div class="SelectionTime">
+                <div>评选时间：2020年8月25日-31日</div>
+                <div style="margin-top:.1rem ">复审时间：2020年9月1日-3日</div>
+            </div>
+        </div>
+
+        <!--倒计时-->
+        <div class="CountDown">
+            <div class="CountDown_box">
+                <img src="images/daojishi01.png" alt="">
+                <span class="Count_font">距离活动结束还有</span>
+            </div>
+            <!--时间-->
+            <div class="CountTime">
+            </div>
+<!--            <div class="Recommend">-->
+<!--                活动已结束-->
+<!--            </div>-->
+        </div>
+
+        <!--投票情况-->
+        <div class="Cumulative_selection">
+            <ul class="selection-ul">
+                <li>
+                    <p class="list-title">候选数量</p>
+                    <p class="list-number">{$pageInfo['num']}</p>
+                </li>
+                <li>
+                    <p class="list-title">累计投票</p>
+                    <p class="list-number" id="list-number">{$pageInfo['votes']}</p>
+                </li>
+                <li>
+                    <p class="list-title">投票人数</p>
+                    <p class="list-number">{$pageInfo['num_2']}</p>
+                </li>
+            </ul>
+        </div>
+        <!--投票规则-->
+        <div class="voteRule">
+            <div>每人每天可投10票</div>
+            <div style="margin-top: .1rem">如被判定机器刷票，则将取消企业或个人的评选资格</div>
+
+        </div>
+        <!--先进区块链企业-->
+        <div class="advancedEnterprises">
+            <img src="images/advancedEnterprises.png" alt="" class="advancedImg">
+            <ul class="advancedul">
+                <!--{foreach name="pageInfo['list_1']" item='vo' }-->
+                <li data-id='{$vo.id}'>
+                    <div class="King_phone">
+                        <img src="{$vo.image}" alt="">
+                    </div>
+                    <div class="BigShot">
+                        <div class="BigShot-title">
+                            <span>{$vo.name}</span>
+                        </div>
+                        <div class="BigShot_p">
+                            <span>{$vo.votes}</span>票
+                        </div>
+                        <!--{if condition="$vo.already eq 1"}-->
+                        <div class="Vote-for-himH">
+                            今日已投
+                        </div>
+                        <!--{else /}-->
+                        <div class="Vote-for-himY">
+                            给TA投票
+                        </div>
+                        <!--{/if}-->
+                    </div>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+            <div class="morebtn" data-type='1'>查看更多</div>
+        </div>
+        <!--优秀区块链项目-->
+        <div class="advancedEnterprises">
+            <img src="images/advancedEnterprises02.png" alt="" class="advancedImg">
+            <ul class="advancedul">
+                <!--{foreach name="pageInfo['list_2']" item='vo' }-->
+                <li data-id='{$vo.id}'>
+                    <div class="King_phone">
+                        <img src="{$vo.image}" alt="">
+                    </div>
+                    <div class="BigShot">
+                        <div class="BigShot-title">
+                            <span>{$vo.name}</span>
+                        </div>
+                        <div class="BigShot_p">
+                            <span>{$vo.votes}</span>票
+                        </div>
+                        <!--{if condition="$vo.already eq 1"}-->
+                        <div class="Vote-for-himH">
+                            今日已投
+                        </div>
+                        <!--{else /}-->
+                        <div class="Vote-for-himY">
+                            给TA投票
+                        </div>
+                        <!--{/if}-->
+                    </div>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+            <div class="morebtn" data-type='2'>查看更多</div>
+        </div>
+        <!--区块链先进个人-->
+        <div class="advancedEnterprises">
+            <img src="images/advancedEnterprises03.png" alt="" class="advancedImg">
+            <ul class="advancedul">
+                <!--{foreach name="pageInfo['list_3']" item='vo' }-->
+                <li data-id='{$vo.id}'>
+                    <div class="King_phone">
+                        <img src="{$vo.image}" alt="">
+                    </div>
+                    <div class="BigShot">
+                        <div class="BigShot-title">
+                            <span>{$vo.name}</span>
+                        </div>
+                        <div class="BigShot_p">
+                            <span>{$vo.votes}</span>票
+                        </div>
+                        <!--{if condition="$vo.already eq 1"}-->
+                        <div class="Vote-for-himH">
+                            今日已投
+                        </div>
+                        <!--{else /}-->
+                        <div class="Vote-for-himY">
+                            给TA投票
+                        </div>
+                        <!--{/if}-->
+                    </div>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+            <div class="morebtn" data-type='3'>查看更多</div>
+        </div>
+        <!--底部背景图-->
+        <div class="bottomBg">
+            <img src="images/backgroundBottom.png" alt="">
+        </div>
+    </div>
+
+</body>
+</html>
+<script src="js/jquery.js"></script>
+<script src="/Public/js/layui/layui.all.js"></script>
+<script>
+
+    layui.use('layer', function(){  //layer弹框
+        var layer = layui.layer;
+    });
+
+    
+    $("#close").click(function () {
+         $(".SuccessfulVoting").hide()
+    });
+    $(".Vote-for-himY").click(function () {
+       
+    });
+    /*自定义次数*/
+    var Votes = '{$userInfo.selection_num}';
+
+    $("body").on("click",".Vote-for-himY",function () {
+
+        var this_id=$(this);
+        var selection_id = $(this).parents('li').attr('data-id');
+
+        /*判断是否点击多次*/
+        if(this_id.hasClass("wyx")){
+            return false;
+        }
+
+        /*次数为零时*/
+        if(Votes==0){
+            $("#Voting-fize").html("今日您已没有投票次数");
+            $(".Voting-top").html("");
+            $(".SuccessfulVoting").show();
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url:"/Home/Ajax/selectionSubmit" ,
+            data:{selection_id:selection_id},
+            dataType:'json',
+            success: function (data) {
+                if(data.code == 1){
+                    Votes--;
+                    $(".Voting-fize span").html(Votes);
+                    this_id.removeClass("Vote-for-himY");
+                    this_id.addClass("Vote-for-himH");
+                    this_id.html("今日已投");
+                    
+                    this_id.addClass("wyx");
+                    $(".SuccessfulVoting").show();
+                    this_id.siblings('.BigShot_p').find('span').html(data.data);
+                }else{
+                    this_id.removeClass("wyx");
+                    layer.msg(data.info);
+                }
+                
+            }
+        });
+
+    });
+
+    var page = 2;
+    /*加载更多*/
+    $(".morebtn").click(function () {
+        var selection_type = $(this).attr('data-type');
+        var obj = $(this).siblings('.advancedul');
+
+        $.ajax({
+            type: "post",
+            url:"/Home/Ajax/selectionMore" ,
+            data:{selection_type:selection_type,page:page},
+            dataType:'json',
+            success: function (data) {
+                if(data.code == 1){ //获取记录成功
+                    obj.append(data.data);
+                    page++;
+                }else if(data.code == 2){ //没有更多
+                    layer.msg('没有更多');
+                }else{              //出错
+                    layer.msg(data.info);
+                }
+            }
+        });
+    })
+
+
+
+    /*倒计时*/
+    var timestamp_before=1598347401;
+    var timestamp_new = (new Date()).getTime();
+    var timestamp=timestamp_before-timestamp_new/1000;
+    var day=hour=minute=second=0;//时间默认值
+    function countDown(times){
+        var timer=null;
+        timer=setInterval(function(){
+            timeStyle(times);
+            times--;
+        },1000);
+        if(times<=0){
+            clearInterval(timer);
+        }
+    }
+    function timeStyle(times){
+        if(times > 0){
+            day = Math.floor(times / (60 * 60 * 24));
+            hour = Math.floor(times / (60 * 60)) - (day * 24);
+            minute = Math.floor(times / 60) - (day * 24 * 60) - (hour * 60);
+            second = Math.floor(times) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+        }
+        if (day <= 9) day = '0' + day;
+        if (hour <= 9) hour = '0' + hour;
+        if (minute <= 9) minute = '0' + minute;
+        if (second <= 9) second = '0' + second;
+
+        $(".CountTime").html(+day+"<span style='font-size: .23rem;margin-right: .1rem'>天</span>"+hour+"<span style='font-size: .23rem;margin-right: .1rem'>时</span>"+minute+"<span style='font-size: .23rem;margin-right: .1rem'>分</span>"+second+"<span style='font-size: .23rem;margin-right: .1rem'>秒</span>");
+    }
+    timeStyle(timestamp);
+    countDown(parseInt(timestamp));
+</script>

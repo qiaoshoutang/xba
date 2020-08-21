@@ -1,0 +1,26 @@
+
+<foreach name='list' item='vo'>
+    <li data-id='{$vo.id}'>
+        <div class="King_phone">
+            <img src="{$vo.image}" alt="">
+        </div>
+        <div class="BigShot">
+            <div class="BigShot-title">
+                <span>{$vo.name}</span>
+            </div>
+            <div class="BigShot_p">
+                <span>{$vo.votes}</span>票
+            </div>
+            <if condition="$vo.already eq 1">
+            <div class="Vote-for-himH">
+                今日已投
+            </div>
+            <else />
+            <div class="Vote-for-himY">
+                给TA投票
+            </div>
+            </if>
+        </div>
+    </li>
+</foreach>
+

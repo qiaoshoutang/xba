@@ -52,7 +52,7 @@ class CouncilController extends AdminController
         $status = I('request.status','');
         if(!empty($status)){
             $where['status'] = $status;
-            $pageMaps['keyword'] = $status;
+            $pageMaps['status'] = $status;
         }
         
 

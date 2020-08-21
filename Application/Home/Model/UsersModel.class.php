@@ -147,19 +147,17 @@ class UsersModel extends Model {
 		// 更新登录信息
 		$data = array(
 				'id' => $userId,
-// 				'last_login_time' => NOW_TIME,
 				'last_login_ip' => get_client_ip(),
 		);
 		$this->save($data);
-		//写入系统记录
-		//api('Admin','AdminLog','addLog','登录系统');
-		//设置cookie
+
+		//设置session
 		$auth = array(
 				'user_id' => $userId,
 		);
 		 
 		session('home_user', $auth);
-		session('home_user_sign', data_auth_sign($auth));
+
 		return true;
 	}
 	

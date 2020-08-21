@@ -26,25 +26,6 @@
       <admin:textarea name="site_statistics"  rows="5" >{$info.site_statistics}</admin:textarea>
     </admin:formrow>
 
-    <admin:formrow title="交易所" tip="已对接交易所的行情API(名称全部小写,名称之间用小写逗号隔开)" >
-      <admin:text name="exchange"  value="{$info.exchange}" len="250" />
-    </admin:formrow>
-
-    <admin:formrow title="公众号二维码" tip="区块链头条快讯页脚默认的二维码"  >
-      <admin:text name="qr_code_a" type="text" value="{$info.qr_code_a}" len="250" width="medium" />
-      <a class="u-btn u-btn-primary u-img-upload" data="qr_code_a" preview="qr-preview_a" href="javascript:;" >上传</a> 
-      <a class="u-btn u-btn-primary"href="javascript:;" id="qr-preview_a">预览</a> 
-    </admin:formrow>
-    <admin:formrow title="公众号二维码" tip="福建区块链俱乐部快讯页脚默认的二维码"  >
-      <admin:text name="qr_code_b" type="text" value="{$info.qr_code_b}" len="250" width="medium" />
-      <a class="u-btn u-btn-primary u-img-upload" data="qr_code_b" preview="qr-preview_b" href="javascript:;" >上传</a> 
-      <a class="u-btn u-btn-primary"href="javascript:;" id="qr-preview_b">预览</a> 
-    </admin:formrow>
-    <admin:formrow title="公众号二维码" tip="蚂蚁区块链快讯页脚默认的二维码"  >
-      <admin:text name="qr_code_c" type="text" value="{$info.qr_code_c}" len="250" width="medium" />
-      <a class="u-btn u-btn-primary u-img-upload" data="qr_code_c" preview="qr-preview_c" href="javascript:;" >上传</a> 
-      <a class="u-btn u-btn-primary"href="javascript:;" id="qr-preview_c">预览</a> 
-    </admin:formrow>
 
     <admin:formsubmit/>
   </admin:form>

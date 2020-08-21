@@ -36,7 +36,7 @@ class ActivityController extends SiteController {
         header("Content-Type:text/html; charset=utf-8");
         $act_id = $this->act_id;
 
-        redirect(U('Home/Activity/selection_page',array('act_id'=>$act_id,'uid'=>2,'openid'=>'oLZqUwUi6L4-KKB32Hmo0mrFlzEI')));
+//         redirect(U('Home/Activity/selection_page',array('act_id'=>$act_id,'uid'=>2,'openid'=>'oLZqUwUi6L4-KKB32Hmo0mrFlzEI')));
         
         $login=A('Home/login');
         $login->dowxlogin($act_id,0);

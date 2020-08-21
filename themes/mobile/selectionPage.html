@@ -259,26 +259,52 @@
 
     });
 
-    var page = 2;
+    var page1 = 2;
+    var page2 = 2;
+    var page3 = 2;
+    var get_more = true;
     /*加载更多*/
     $(".morebtn").click(function () {
+        if(!get_more){
+            return false;
+        }
+        get_more = false;
         var selection_type = $(this).attr('data-type');
         var obj = $(this).siblings('.advancedul');
+        var page_temp;
+        if(selection_type == 1){
+            page_temp = page1;
+        }
+        if(selection_type == 2){
+            page_temp = page2;
+        }
+        if(selection_type == 3){
+            page_temp = page3;
+        }
 
         $.ajax({
             type: "post",
             url:"/Home/Ajax/selectionMore" ,
-            data:{selection_type:selection_type,page:page},
+            data:{selection_type:selection_type,page:page_temp},
             dataType:'json',
             success: function (data) {
                 if(data.code == 1){ //获取记录成功
                     obj.append(data.data);
-                    page++;
+                    if(selection_type == 1){
+                        page1++;
+                    }
+                    if(selection_type == 2){
+                        page2++;
+                    }
+                    if(selection_type == 3){
+                        page3++;
+                    }
                 }else if(data.code == 2){ //没有更多
                     layer.msg('没有更多');
                 }else{              //出错
                     layer.msg(data.info);
                 }
+                get_more = true;
             }
         });
     })

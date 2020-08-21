@@ -1,6 +1,6 @@
 .box{
     min-width: 320px;
-    max-width: 640px;
+    max-width: 800px;
     margin: 0 auto;
     background:url("../images/backgroundbox.jpg")no-repeat center top ;
     background-size: 100% 100%;
@@ -37,6 +37,7 @@
     letter-spacing: 1px;
     position:relative ;
     top: -.65rem;
+
 }
 .ContentBox{
     width: 80%;
@@ -59,11 +60,19 @@
     letter-spacing: 1px;
     position: absolute;
     bottom: .5rem;
+
 }
 .bottomFont p{
     margin-top: .1rem;
 }
+
 @media only screen and (device-width: 375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3){
+    .box{
+        height: 100vh!important;
+    }
+
+}
+@media only screen and (device-width: 414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3){
     .box{
         height: 100vh!important;
     }

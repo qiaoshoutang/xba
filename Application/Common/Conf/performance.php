@@ -48,6 +48,7 @@ return array(
 	    //活动 
 	    'xba_selection'       =>  'Home/Activity/selection',
 	    'xba_selection_rule'       =>  'Home/Activity/selection_rule',
+	    'xba_selection_page'       =>  'Home/Activity/selection_login',
 	    
 	    
 	    'test_m'          =>  'Home/Mobile/council_2',

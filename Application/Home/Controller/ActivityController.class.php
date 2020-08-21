@@ -47,6 +47,10 @@ class ActivityController extends SiteController {
     public function selection_page(){
         header("Content-Type:text/html; charset=utf-8");
 
+        $login_user = session('home_user');
+        if(empty($login_user)){
+            redirect(U('Home/Activity/selection_login'));
+        }
         $act_id = I('get.act_id',0,'intval');
         $uid = I('get.uid',0,'intval');
         $openid = I('get.openid',0,'trim');
@@ -61,8 +65,6 @@ class ActivityController extends SiteController {
         
         if(empty($uinfo)) {
             $this->error('找不到用户信息',U('Home/Activity/selection'));
-        }else{
-            $userMod->setLogin($uid);
         }
 
         
@@ -104,11 +106,14 @@ class ActivityController extends SiteController {
                 }
             }
         }
-
+        $contentInfo = array('title'=>'区块链企业年中评选','description'=>'2020年厦门市区块链企业年中评选','image'=>'http://hd.lpchain.net/Uploads/2020-08-21/5f3f7aab2bb3f.jpg');
         $this->assign('uid',$uid);
         $this->assign('pageInfo',$pageInfo);
         $this->assign('userInfo',$uinfo);
 
+        $tiket = A('Home/Wechat')->set_signature();
+        $this->assign('contentInfo',$contentInfo);
+        C('TPL_NAME','mobile');
         $this -> siteDisplay('selectionPage');
     }
      

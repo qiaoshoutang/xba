@@ -4,12 +4,6 @@
     <list default="true" id="7672913a-3434-4b19-8359-3bb92c02cc5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/mobile/css/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/css/page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/images/advancedEnterprises.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/images/rule01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/images/rule02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/images/rule03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/rule.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/rule.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/selectionPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/selectionPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +85,7 @@
       <workItem from="1598239942453" duration="1053000" />
       <workItem from="1598318748229" duration="656000" />
       <workItem from="1598593628226" duration="5694000" />
-      <workItem from="1598838909863" duration="4420000" />
+      <workItem from="1598838909863" duration="5046000" />
     </task>
     <servers />
   </component>
@@ -111,9 +105,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2104" y="105" key="DiffContextDialog" timestamp="1598862184099">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2104" y="105" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598862184099" />
     <state x="2660" y="294" key="FileChooserDialogImpl" timestamp="1598861095415">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598861095415" />
+    <state x="2104" y="105" key="MergeDialog" timestamp="1598862535715">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2104" y="105" key="MergeDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598862535715" />
+    <state x="2515" y="299" key="MultipleFileMergeDialog" timestamp="1598862535720">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2515" y="299" key="MultipleFileMergeDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598862535720" />
   </component>
 </project>

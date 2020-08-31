@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7672913a-3434-4b19-8359-3bb92c02cc5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/leader.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/leader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/newsContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/newsContent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/mobile/css/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/css/page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/images/rule01.png" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/images/rule01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/images/rule02.png" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/images/rule02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/selection.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/selection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/mobile/images/advancedEnterprises.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/mobile/images/rule01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/mobile/images/rule02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/mobile/images/rule03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/mobile/rule.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/rule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/mobile/selectionPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/mobile/selectionPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,40 +24,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>.Association-Brief-content</find>
-      <find>.Cont_R_Text</find>
-      <find>.Title_Ass_ul li</find>
-      <find>.info h4</find>
-      <find>300</find>
-      <find>.titile-association ul li</find>
-      <find>.Title_Apply</find>
-      <find>Content-introduction</find>
-      <find>.topTitle_Ggg</find>
-      <find>.nav-header-logo img</find>
-      <find>.titile-association</find>
-      <find>.association-div a</find>
-      <find>AdMTextP</find>
-      <find>.MembermanageContent</find>
-      <find>.slideBox .hd li</find>
-      <find>Tx-Lea</find>
-      <find>.nav-header</find>
-      <find>.AssGgUl ul li</find>
-      <find>.noticeTextTitleBox</find>
-      <find>.Ass-Ac-Hd</find>
-      <find>.textareaBox textarea</find>
-      <find>Ass-Ac-text-small</find>
-      <find>content-association</find>
-      <find>Title_Ass</find>
-      <find>.list_Cont_R</find>
-      <find>.Title_Tro_ul li</find>
-      <find>.AssGgUl ul</find>
-      <find>Ass-Ac-text-big</find>
-      <find>eng</find>
-      <find>zengt</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -68,10 +34,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579079102976" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blocktop" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -120,7 +87,11 @@
       <workItem from="1597720218603" duration="936000" />
       <workItem from="1597743012095" duration="616000" />
       <workItem from="1597800388405" duration="417000" />
-      <workItem from="1597972886383" duration="820000" />
+      <workItem from="1597972886383" duration="1435000" />
+      <workItem from="1598239942453" duration="1053000" />
+      <workItem from="1598318748229" duration="656000" />
+      <workItem from="1598593628226" duration="5694000" />
+      <workItem from="1598838909863" duration="4420000" />
     </task>
     <servers />
   </component>
@@ -138,5 +109,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2660" y="294" key="FileChooserDialogImpl" timestamp="1598861095415">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598861095415" />
   </component>
 </project>

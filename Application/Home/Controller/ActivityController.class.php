@@ -50,9 +50,14 @@ class ActivityController extends SiteController {
         $login_user = session('home_user');
         if(empty($login_user)){
             redirect(U('Home/Activity/selection_login'));
+        }else{
+            $uid = $login_user['user_id'];
         }
+//         dump($uid);
+//         dump($login_user);
+//         exit;
         $act_id = I('get.act_id',0,'intval');
-        $uid = I('get.uid',0,'intval');
+//         $uid = I('get.uid',0,'intval');
         $openid = I('get.openid',0,'trim');
 
         if (empty($uid)||empty($openid)) {
@@ -64,7 +69,7 @@ class ActivityController extends SiteController {
         $uinfo=$userMod->getUserInfo(array('id'=>$uid,'openid'=>$openid));
         
         if(empty($uinfo)) {
-            $this->error('找不到用户信息',U('Home/Activity/selection'));
+            redirect(U('Home/Activity/selection_login'));
         }
 
         
@@ -74,9 +79,9 @@ class ActivityController extends SiteController {
         $pageInfo['votes'] = $selectionMod->where(['status'=>1])->sum('votes');
         $pageInfo['num_2'] = $userMod->where(['act_id'=>1])->count();
         
-        $pageInfo['list_1'] = $selectionMod->where(['type'=>1,'status'=>1])->page(1,2)->select();
-        $pageInfo['list_2'] = $selectionMod->where(['type'=>2,'status'=>1])->page(1,2)->select();
-        $pageInfo['list_3'] = $selectionMod->where(['type'=>3,'status'=>1])->page(1,2)->select();
+        $pageInfo['list_1'] = $selectionMod->where(['type'=>1,'status'=>1])->page(1,10)->select();
+        $pageInfo['list_2'] = $selectionMod->where(['type'=>2,'status'=>1])->page(1,10)->select();
+        $pageInfo['list_3'] = $selectionMod->where(['type'=>3,'status'=>1])->page(1,10)->select();
         
         //用户今天的投票记录
         $recordMod = M('SelectionRecord');
@@ -106,7 +111,7 @@ class ActivityController extends SiteController {
                 }
             }
         }
-        $contentInfo = array('title'=>'区块链企业年中评选','description'=>'2020年厦门市区块链企业年中评选','image'=>'http://hd.lpchain.net/Uploads/2020-08-21/5f3f7aab2bb3f.jpg');
+        $contentInfo = array('title'=>'2020厦门区块链企业年中评选盛大开启','description'=>'谁才是2020最具价值区块链创新企业?','image'=>'http://hd.lpchain.net/Uploads/2020-08-21/5f3f7aab2bb3f.jpg');
         $this->assign('uid',$uid);
         $this->assign('pageInfo',$pageInfo);
         $this->assign('userInfo',$uinfo);

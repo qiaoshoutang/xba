@@ -124,7 +124,7 @@ class AjaxController extends SiteController {
             $this->ajaxReturn($rdata);
         }
         $selectionMod=M('Selection');
-        $list = $selectionMod->where(['type'=>$selection_type,'status'=>1])->page($page,2)->select();
+        $list = $selectionMod->where(['type'=>$selection_type,'status'=>1])->page($page,10)->select();
         if(empty($list)){
             $rdata['code'] = 2;
             $rdata['info'] = '没有更多了';

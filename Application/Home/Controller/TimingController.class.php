@@ -12,7 +12,7 @@ class TimingController extends SiteController {
     //每天零点刷新用户的剩余可投票数
     public function refreshSelection(){
         header("Content-Type:text/html; charset=utf-8");
-        $res  = M('Users')->where(['act_id'=>1])->setField('selection_num',10);
+        $res  = M('Users')->where(['act_id'=>1])->setField('selection_num',5);
         if($res === false){
             echo '刷新用户剩余投票数失败';
             exit;

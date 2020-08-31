@@ -36,8 +36,8 @@ class LoginController extends BaseController {
         }
         if (iswx()) {
             
-            $APPID = 'wxdebea819f65bfb54';
-            $SCRETID = '88bbe0107b3e5d769f156a839d515485';
+            $APPID = C('APPID');
+            $SCRETID = C('SECRET');
             
             if (!isset($_GET['code'])) {
                 
@@ -70,8 +70,8 @@ class LoginController extends BaseController {
                     $res= $usermod->wxregopenid($openid,$rearr2);
   					
                     if($res){
-
-                        $gourl = U('Home/Activity/redirectShow',array('act_id'=>$act_id,'uid'=>$res,'openid'=>$openid));
+                        $usermod->setLogin($res);
+                        $gourl = U('Home/Activity/selection_page',array('act_id'=>$act_id,'uid'=>$res,'openid'=>$openid));
                         redirect($gourl);
                     }
                     
@@ -79,18 +79,21 @@ class LoginController extends BaseController {
 
                     if($udb['act_id']==$act_id){//参加过该活动   直接跳转至用户信息页面
 
+                        
                         //参加过该活动  直接跳转至用户信息页面
-                        $gourl = U('Home/Activity/redirectShow',array('act_id'=>$act_id,'uid'=>$udb['id'],'openid'=>$udb['openid']));
+                        $gourl = U('Home/Activity/selection_page',array('act_id'=>$act_id,'uid'=>$udb['id'],'openid'=>$udb['openid']));
                         
                     }else{  //未参加过该活动
                         
                         $usermod->where(array('id'=>$udb['id']))->setField('act_id',$act_id);//更新活动ID
-                        $gourl = U('Home/Activity/redirectShow',array('act_id'=>$act_id,'uid'=>$udb['id'],'openid'=>$udb['openid'])); 
+                        $gourl = U('Home/Activity/selection_page',array('act_id'=>$act_id,'uid'=>$udb['id'],'openid'=>$udb['openid'])); 
                     }
-
+                    $usermod->setLogin($udb['id']);
                     redirect($gourl);
                 }
             }
+        }else{
+            exit('请在微信内打开');
         }
         
     }

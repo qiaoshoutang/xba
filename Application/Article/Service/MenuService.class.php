@@ -10,7 +10,7 @@ class MenuService{
 	public function getAdminMenu(){
 		return array(
 		    'Content' => array(
-		        'name' => '新闻管理',
+		        'name' => '内容管理',
 		        'icon' => 'home',
 		        'order' => 5,
                 'menu' => array(
@@ -22,12 +22,22 @@ class MenuService{
                     array(
                         'name' => '国际资讯',
                         'url' =>  U('Article/AdminContent/index',array('class_id'=>2)),
-                        'order' => 2
+                        'order' => 3
                     ),
                     array(
                         'name' => '国内要闻',
                         'url' =>  U('Article/AdminContent/index',array('class_id'=>3)),
-                        'order' => 2
+                        'order' =>5
+                    ),
+                    array(
+                        'name' => '协会公告',
+                        'url' =>  U('Article/AdminContent/index',array('class_id'=>4)),
+                        'order' =>7
+                    ),
+                    array(
+                        'name' => '协会快讯',
+                        'url' =>  U('Article/Message/index'),
+                        'order' => 9
                     )
                 )
             ),

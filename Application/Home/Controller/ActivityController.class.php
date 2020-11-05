@@ -60,7 +60,7 @@ class ActivityController extends SiteController {
 //         $uid = I('get.uid',0,'intval');
         $openid = I('get.openid',0,'trim');
 
-        if (empty($uid)||empty($openid)) {
+        if (empty($uid)||empty($openid)){
             exit('缺少uid');
             $this->error404();
         }

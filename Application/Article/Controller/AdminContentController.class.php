@@ -22,12 +22,12 @@ class AdminContentController extends AdminController {
                         'icon' => 'list',
                     ),
                     array(
-                        'name' => '国际新闻',
+                        'name' => '国际资讯',
                         'url' => U('index',array('class_id'=>2)),
                         'icon' => 'list',
                     ),
                     array(
-                        'name' => '国内新闻',
+                        'name' => '国内要闻',
                         'url' => U('index',array('class_id'=>3)),
                         'icon' => 'list',
                     ),

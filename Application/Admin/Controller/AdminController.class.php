@@ -110,4 +110,28 @@ class AdminController extends BaseController {
         echo str_replace('<!--common-->', $tpl, $common);
     }
     
+    /**
+     * 生成海报
+     */
+    protected function makePoster($info){
+        if(empty($info['id'])||empty($info['title'])||empty($info['content'])){
+            $rdata['code'] = 0;
+            $rdata['msg'] = '参数不能为空';
+            return $rdata;
+        }
+//         $info['time'] = $info['ori_time'];
+        $poster = new \Common\Controller\MessagePoster();
+        $poster_url = $poster->initConfig($info);
+        if(empty($poster_url)){
+            $rdata['code'] = 0;
+            $rdata['msg'] = '海报生成失败';
+            return $rdata;
+        }
+        
+        $rdata['code'] = 1;
+        $rdata['msg'] = '海报生成成功';
+        $rdata['data'] = $poster->getPosterUrl();
+        return $rdata;
+    }
+    
 }
